@@ -1,13 +1,10 @@
 # --- Day 1: Sonar Sweep ---
 
-## Part 1
-
-Time: 00:02:24
-
-Rank: 942
-
+## Stats
+### Part 1
+Time: 00:02:24   |   Rank: 942
 ## Part 2
+Time: 00:07:38   |   Rank: 1553
 
-Time: 00:07:38
-
-Rank: 1553
+## Video
+https://www.youtube.com/watch?v=IhhJfaYf4XU
