@@ -6,26 +6,23 @@ lines = get_lines_from_file("test.txt")
 # # Open data
 # lines = get_lines_from_file("data.txt")
 
-# # Write to new file
-# write_lines_to_file("new.txt", lines)
-
 
 # List comprehension 
-lines = [l for l in lines]
-
-
+# lines = [l for l in lines]
 
 # Print first n
 print_first_n(100, lines)
 
+
+
+
+
+
+# # Write to new file
+# write_lines_to_file("new.txt", lines)
+
 # # Print last n
 # print_last_n(100, lines)
-
-
-
-
-
-
 
 # === REGEX ===
 
