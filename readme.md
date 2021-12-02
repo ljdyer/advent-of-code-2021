@@ -1,5 +1,7 @@
 # Advent of Code 2021
 
+https://adventofcode.com/2021/
+
 <table>
   <col>
   <colgroup span="2"></colgroup>
