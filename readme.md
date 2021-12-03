@@ -1,5 +1,7 @@
 # Advent of Code 2021
 
+https://adventofcode.com/2021/
+
 <table>
   <col>
   <colgroup span="2"></colgroup>
@@ -38,7 +40,7 @@
     <td>00:07:01</td>
     <td>2180</td>
   </tr>
-    <tr>
+  <tr>
     <th scope="row"><a href="/day3">Day 3: Binary Diagnostic</a></th>
     <td>5:45am GMT</td>
     <td>00:53:54</td>
