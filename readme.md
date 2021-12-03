@@ -44,10 +44,10 @@ https://adventofcode.com/2021/
     <th scope="row"><a href="/day3">Day 3: Binary Diagnostic</a></th>
     <td>5:45am GMT</td>
     <td>00:53:54</td>
-    <td>around 8 mins</td>
+    <td>00:08:50</td>
     <td>13726</td>
     <td>01:03:42</td>
-    <td>around 18 mins</td>
+    <td>00:18:40</td>
     <td>7012</td>
   </tr>
 </table>
