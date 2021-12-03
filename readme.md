@@ -38,4 +38,14 @@
     <td>00:07:01</td>
     <td>2180</td>
   </tr>
+    <tr>
+    <th scope="row"><a href="/day3">Day 3: Binary Diagnostic</a></th>
+    <td>5:45am GMT</td>
+    <td>00:53:54</td>
+    <td>around 8 mins</td>
+    <td>13726</td>
+    <td>01:03:42</td>
+    <td>around 18 mins</td>
+    <td>7012</td>
+  </tr>
 </table>
