@@ -21,7 +21,7 @@ https://adventofcode.com/2021/
     <th scope="col">Rank (official)</th>
   </tr>
   <tr>
-    <th scope="row"><a href="/day1">Day 1: Sonar Sweep</a></th>
+    <th scope="row"><a href="/day1">Day 1</a></th>
     <td>5:00am GMT</td>
     <td>00:02:24</td>
     <td>00:02:24</td>
@@ -31,7 +31,7 @@ https://adventofcode.com/2021/
     <td>1553</td>
   </tr>
   <tr>
-    <th scope="row"><a href="/day2">Day 2: Dive!</a></th>
+    <th scope="row"><a href="/day2">Day 2</a></th>
     <td>5:00am GMT</td>
     <td>00:05:15</td>
     <td>00:05:15</td>
@@ -41,7 +41,7 @@ https://adventofcode.com/2021/
     <td>2180</td>
   </tr>
   <tr>
-    <th scope="row"><a href="/day3">Day 3: Binary Diagnostic</a></th>
+    <th scope="row"><a href="/day3">Day 3</a></th>
     <td>5:45am GMT</td>
     <td>00:53:54</td>
     <td>00:08:50</td>
