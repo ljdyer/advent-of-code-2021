@@ -2,6 +2,8 @@
 
 https://adventofcode.com/2021/
 
+Puzzles are released at 5am GMT (midnight EST) each day, so if I was awake and started at that time then the actual time I took is the same as the official time. If I started later, official time includes the time between 5am and when I started.
+
 <table>
   <tr>
     <th>Part 1</th>
