@@ -14,7 +14,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 
 ## Stats & solutions
 
-<table>
+<table style="margin:auto">
   <tr>
     <td></td>
     <th style="text-align:center">Part 1 time<br>[actual / official (rank)]</th>
