@@ -81,4 +81,14 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
         <span style="color:gray">YouTube</span>
     </td>
   </tr>
+    <tr>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/7">Day 7</a></th>
+    <td>00:07:40 / ??:??:?? (????)</td>
+    <td>00:12:58 / ??:??:?? (????)</td>
+    <td>
+      <a href="/day7/solution-on-the-day.py">On the day</a> |
+       <a href="/day7/solution-tidied.py">Tidied up</a> | 
+        <span style="color:gray">YouTube</span>
+    </td>
+  </tr>
 </table>
