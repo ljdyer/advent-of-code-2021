@@ -81,13 +81,23 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
         <span style="color:gray">YouTube</span>
     </td>
   </tr>
-    <tr>
+  <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/7">Day 7</a></th>
-    <td>00:07:40 / ??:??:?? (????)</td>
-    <td>00:12:58 / ??:??:?? (????)</td>
+    <td>00:07:40 / 01:48:26 (16245)</td>
+    <td>00:12:58 / 01:53:42 (14942)</td>
     <td>
       <a href="/day7/solution-on-the-day.py">On the day</a> |
        <a href="/day7/solution-tidied.py">Tidied up</a> | 
+        <span style="color:gray">YouTube</span>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/8">Day 8</a></th>
+    <td>00:09:53 / 01:09:03 (11973)</td>
+    <td>around 1 hr 45 mins / 10:19:39 (23567)</td>
+    <td>
+      <a href="/day8/solution-on-the-day.py">On the day</a> |
+       <span style="color:gray">Tidied up</span>
         <span style="color:gray">YouTube</span>
     </td>
   </tr>
