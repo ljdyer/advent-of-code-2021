@@ -1,7 +1,7 @@
 from helper import *
 
 def reverse_dict(d):
-        return {v:k for k,v in d.items() if not isinstance(v,list)}
+    return {v:k for k,v in d.items() if not isinstance(v,list)}
 
 obs_maps = {
     0: 'abcefg',
@@ -73,18 +73,33 @@ def get_mapping(line):
     eight = get_obs_with_len(7,line)
     five_segs = get_obs_with_len(5,line)
 
+    def set_diff(s1, s2):
+        return s1.difference(s2)
+    def set_int(s1, s2):
+        return s1.intersection(s2)
+    def set_union(s1, s2):
+        return s1.union(s2)
+
+    def obs_operation(o1, o2, operator):
+        i = list(operator(set(o1), set(o2)))
+        if len(i) == 1:
+            return i[0]
+        else:
+            return i
+
     # a is in 7 but not in 1
-    real_to_obs['a'] = [x for x in seven if x not in one][0]
+    real_to_obs['a'] = obs_operation(seven, one, set_diff)
     # c and f are in 7 and 1
-    cf = list(set([x for x in seven if x in one]))
+    cf = obs_operation(seven, one, set_int)
     real_to_obs['c'] = cf
     real_to_obs['f'] = cf
     # b and d are in 4 but not in 7 or 1
-    bd = list(set([x for x in four if not x in cf]))
+    bd = obs_operation(four, cf, set_diff)
     real_to_obs['b'] = bd
     real_to_obs['d'] = bd
     # e and g are in 8 but not in 4 or 7
-    eg = list(set([x for x in eight if not (x in four or x in seven)]))
+    four_or_seven = obs_operation(four, seven, set_union)
+    eg = obs_operation(eight, four_or_seven, set_diff)
     real_to_obs['e'] = eg
     real_to_obs['g'] = eg
     # d and g are in all numbers with 5 segments
