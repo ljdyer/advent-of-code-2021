@@ -108,7 +108,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <td>
       <a href="/day9/solution-on-the-day.py">On the day</a> |
        <a href="/day9/solution-tidied.py">Tidied up</a> |
-        <span style="color:gray">YouTube</span>
+        <a href="https://youtu.be/eCbsqR0yHXU">YouTube</a>
     </td>
   </tr>
   <tr>
