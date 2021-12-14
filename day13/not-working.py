@@ -1,9 +1,7 @@
-from helper import *
 from tabulate import tabulate
 
-# Get data
-# lines = get_lines_from_file("test.txt")
-lines = get_lines_from_file("data.txt")
+with open("data.txt", encoding='utf-8') as file:
+    lines = file.read().splitlines()
 
 lines = [l.split('-') for l in lines]
 blank_line = lines.index([''])
@@ -25,10 +23,11 @@ for x,y in dots:
 
 
 def fold_y(y_fold, matrix):
+    
     lines_above_fold = matrix[:y_fold]
-    lines_below_fold = matrix[-1:y_fold:-1]
+    lines_below_fold = matrix[len(matrix):y_fold-1:-1]
     lines_without = [i for i in range(len(matrix)) if not '#' in matrix[i]]
-    print(lines_without)
+    print("Y", len(lines_above_fold), len(lines_below_fold))
     for i in range(len(lines_below_fold)):
         for y in range(len(lines_above_fold[i])):
             if lines_below_fold[i][y] == '#':
@@ -36,16 +35,17 @@ def fold_y(y_fold, matrix):
     return lines_above_fold
 
 def fold_x(x_fold, matrix):
+
     lines_left_fold = [l[:x_fold] for l in matrix]
-    lines_right_fold = [l[-1:x_fold:-1] for l in matrix]
+    lines_right_fold = [l[len(l):x_fold:-1] for l in matrix]
     fold_column = [l[x_fold] for l in matrix]
+    print("X", len(lines_left_fold[0]), len(lines_right_fold[0]))
     if '#' in fold_column:
         print(x_fold, 'warning')
     for row in range(len(lines_right_fold)):
         for column in range(len(lines_left_fold[row])):
             if lines_right_fold[row][column] == '#':
                 lines_left_fold[row][column] = '#'
-
     return lines_left_fold
 
 def print_matrix(matrix):
@@ -120,5 +120,3 @@ print(len(all))
 # print(len(all))
 # all = [i for x in invisible_lines for i in x if i == '#']
 # print(len(all))
-
-A B C D E F G H I J K L M N O P Q R S T U V W X Y Z

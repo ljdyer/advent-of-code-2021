@@ -1,9 +1,7 @@
-from helper import *
 from tabulate import tabulate
 
-# Get data
-lines = get_lines_from_file("test.txt")
-# lines = get_lines_from_file("data.txt")
+with open("data.txt", encoding='utf-8') as file:
+    lines = file.read().splitlines()
 
 lines = [l.split('-') for l in lines]
 blank_line = lines.index([''])
@@ -17,17 +15,30 @@ instructions = lines [blank_line+1:]
 
 m_max = max([int(x[0]) for x in dots])
 n_max = max([int(x[1]) for x in dots])
+# My method needs odd numbers of rows and columns to work
+if m_max % 2 == 0:
+    m_max = m_max + 1
+else:
+    m_max = m_max + 2
+if n_max % 2 == 0:
+    n_max = n_max + 1
+else:
+    n_max = n_max + 2
 
-matrix = [['.' for m in range(m_max+1)] for n in range(n_max+1)]
+matrix = [['.' for m in range(m_max)] for n in range(n_max)]
+print(len(matrix))
+print(len(matrix[0]))
 
 for x,y in dots:
     matrix[y][x] = '#'
 
 
 def fold_y(y_fold, matrix):
+    
     lines_above_fold = matrix[:y_fold]
-    lines_below_fold = matrix[-1:y_fold:-1]
-    print(matrix[y_fold])
+    lines_below_fold = matrix[len(matrix):y_fold:-1]
+    lines_without = [i for i in range(len(matrix)) if not '#' in matrix[i]]
+    print("Y", len(lines_above_fold), len(lines_below_fold))
     for i in range(len(lines_below_fold)):
         for y in range(len(lines_above_fold[i])):
             if lines_below_fold[i][y] == '#':
@@ -35,13 +46,13 @@ def fold_y(y_fold, matrix):
     return lines_above_fold
 
 def fold_x(x_fold, matrix):
-    lines_left_fold = [l[:x_fold] for l in matrix]
-    lines_right_fold = [l[-1:x_fold:-1] for l in matrix]
-    fold_column = [l[x_fold] for l in matrix]
-    print(fold_column)
 
-    # print(tabulate(lines_left_fold))
-    # print(tabulate(lines_right_fold))
+    lines_left_fold = [l[:x_fold] for l in matrix]
+    lines_right_fold = [l[len(l):x_fold:-1] for l in matrix]
+    fold_column = [l[x_fold] for l in matrix]
+    print("X", len(lines_left_fold[0]), len(lines_right_fold[0]))
+    if '#' in fold_column:
+        print(x_fold, 'warning')
     for row in range(len(lines_right_fold)):
         for column in range(len(lines_left_fold[row])):
             if lines_right_fold[row][column] == '#':
@@ -51,15 +62,26 @@ def fold_x(x_fold, matrix):
 def print_matrix(matrix):
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
-            print(matrix[i][j], end='')
+            if matrix[i][j] == '#':
+                print("X", end='')
+            else:
+                print(" ", end = '')
         print()
 
 # y_fold = int(instructions[0][0].partition('=')[2])
 # matrix = fold_y(y_fold, matrix)
-
-matrix = fold_x(5,matrix)
-matrix = fold_y(7, matrix)
-# matrix = fold_x(2, matrix)
+matrix = fold_x(655,matrix)
+matrix = fold_y(447,matrix)
+matrix = fold_x(327,matrix)
+matrix = fold_y(223,matrix)
+matrix = fold_x(163,matrix)
+matrix = fold_y(111,matrix)
+matrix = fold_x(81,matrix)
+matrix = fold_y(55,matrix)
+matrix = fold_x(40,matrix)
+matrix = fold_y(27,matrix)
+matrix = fold_y(13,matrix)
+matrix = fold_y(6,matrix)
 print_matrix(matrix)
 
 
