@@ -11,7 +11,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 - Puzzles are released at 5am GMT (midnight EST) each day. If the start time is the same as the actual time in the table below, I was awake and began working on my solution at 5am and the rank includes only others who started at the same time. If the start and actual time are different, I began working on my solution later in the day so the rank includes others who started before me.
 - **On the day** solutions are just an upload of the unedited code file at the time I solved the problem. **Tidied up** solutions are post-edited versions of the code that show my solution more clearly.
 - Click on the **YouTube** links to watch a recording of me solving the problems in real time. If the **YouTube** link is greyed out for a given day, it means I either haven't got around to uploading the video yet, or I wasn't able to record one on that day.
-- No actual time is recorded for day 13 because I got stuck and had to refer to somebody else's code to get to the solution.
+- An actual time of '--:--:--' means that part took me a while and I gave up timing myself, but still finished it on the day.
 
 ## Stats & solutions
 
@@ -144,8 +144,30 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
   </tr>
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/13">Day 13</a></th>
-    <td>--:--:-- / 01:33:34 (8252)</td>
+    <td>01:33:34 / 01:33:34 (8252)</td>
     <td>--:--:-- / 02:35:16 (9840)</td>
+    <td>
+      <a href="/day13/solution-on-the-day.py">On the day</a> |
+       <span style="color:gray">Tidied up</span> |
+        <span style="color:gray">YouTube</span>
+    </td>
+  </tr>
+  </tr>
+    <tr>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/14">Day 14</a></th>
+    <td>00:08:31 / 02:48:31 (13540)</td>
+    <td>NOT YET</td>
+    <td>
+      <span style="color:gray">On the day</span> |
+       <span style="color:gray">Tidied up</span> |
+        <span style="color:gray">YouTube</span>
+    </td>
+  </tr>
+  </tr>
+    <tr>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/15">Day 15</a></th>
+    <td>01:02:09 / 01:02:09 (3999)</td>
+    <td>NOT YET</td>
     <td>
       <span style="color:gray">On the day</span> |
        <span style="color:gray">Tidied up</span> |

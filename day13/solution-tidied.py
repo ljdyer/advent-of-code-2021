@@ -1,22 +1,34 @@
-from tabulate import tabulate
-
 with open("data.txt", encoding='utf-8') as file:
     lines = file.read().splitlines()
 
 lines = [l.split('-') for l in lines]
 blank_line = lines.index([''])
+
+# Get dots
 dots = lines[:blank_line]
-
 dots = [l[0].split(',') for l in dots]
-for i in range(len(dots)):
-    dots[i] = tuple((int(dots[i][0]), int(dots[i][1])))
+dots = [tuple(int(x), int(y)) for x,y in dots]
 
-instructions = lines [blank_line+1:]
+# Get instructions
+instructions = lines[blank_line+1:]
+instructions = [i.partition('=') for i in instructions]
+instructions = [tuple(parts[0][-1], int(parts[2])) for parts in instructions]
 
 m_max = max([int(x[0]) for x in dots])
 n_max = max([int(x[1]) for x in dots])
+# My method needs odd numbers of rows and columns to work
+if m_max % 2 == 0:
+    m_max = m_max + 1
+else:
+    m_max = m_max + 2
+if n_max % 2 == 0:
+    n_max = n_max + 1
+else:
+    n_max = n_max + 2
 
-matrix = [['.' for m in range(m_max+1)] for n in range(n_max+1)]
+matrix = [['.' for m in range(m_max)] for n in range(n_max)]
+print(len(matrix))
+print(len(matrix[0]))
 
 for x,y in dots:
     matrix[y][x] = '#'
@@ -25,7 +37,7 @@ for x,y in dots:
 def fold_y(y_fold, matrix):
     
     lines_above_fold = matrix[:y_fold]
-    lines_below_fold = matrix[len(matrix):y_fold-1:-1]
+    lines_below_fold = matrix[len(matrix):y_fold:-1]
     lines_without = [i for i in range(len(matrix)) if not '#' in matrix[i]]
     print("Y", len(lines_above_fold), len(lines_below_fold))
     for i in range(len(lines_below_fold)):
