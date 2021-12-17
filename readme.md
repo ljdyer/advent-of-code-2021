@@ -148,7 +148,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <td>02:35:16 / 02:35:16 (9840)</td>
     <td>
       <a href="/solutions/day13/solution-on-the-day.py">On the day</a> |
-       <span style="color:gray">Tidied up</span> |
+       <a href="/solutions/day13/solution-tidied.py">Tidied up</a> |
         <span style="color:gray">YouTube</span>
     </td>
   </tr>
