@@ -145,7 +145,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/13">Day 13</a></th>
     <td>01:33:34 / 01:33:34 (8252)</td>
-    <td>--:--:-- / 02:35:16 (9840)</td>
+    <td>02:35:16 / 02:35:16 (9840)</td>
     <td>
       <a href="/solutions/day13/solution-on-the-day.py">On the day</a> |
        <span style="color:gray">Tidied up</span> |
