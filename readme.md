@@ -189,7 +189,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/17">Day 17</a></th>
     <td>00:55:49 / 01:27:49 (5126)</td>
-    <td>NOT YET</td>
+    <td>??:??:?? / 15:52:01 (17995)</td>
     <td>
       <a href="/solutions/day17/solution-unfinished.py">On the day</a> |
        <span style="color:gray">Tidied up</span> |

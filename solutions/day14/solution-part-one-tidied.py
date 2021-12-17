@@ -11,7 +11,7 @@ for i in range(2,len(lines)):
     rules[from_] = to
 
 # Generate polymer template after 10 steps
-for i in range(20):
+for i in range(10):
     n = 0
     while n < len(polymer_template)-1:
         this_pair = polymer_template[n:n+2]

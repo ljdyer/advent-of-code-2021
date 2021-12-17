@@ -56,8 +56,12 @@ print(matrix_width)
 
 nodes = []
 for i in range(0, matrix_height):
-    for j in range(0, matrix_width):
+    start = max(0, i - 2500)
+    width = min(2500+i, matrix_width-start)
+    for j in range(start, start+width):
+    # for j in range(0, matrix_width):
         nodes.append((i,j))
+print(len(nodes))
 
 dist = {n:"I" for n in nodes}
 prev = {n:'' for n in nodes}
@@ -77,11 +81,30 @@ dist[(0,0)] = 0
 # 22      return dist[], prev[]
 
 # while nodes:
+
+x = "I"
+
 while nodes:
-    _, u = min([(dist[node], node) for node in nodes if isinstance(dist[node],int)])
+
+    # u = None
+    # while not u:
+    #     if x == "I":
+    #         u = nodes[0]
+    #         x = 0
+    #     else:
+    #         for n in nodes:
+    #             if dist[n] == x:
+    #                 u = n
+    #                 break
+    #         else:
+    #             x += 1
+                
+    # print(x, len(nodes))
+    u = _, u = min([(dist[node], node) for node in nodes if isinstance(dist[node],int)])
+
+    # u = nodes[0]
 
     nodes = [n for n in nodes if n != u]
-    print(len(nodes))
 
     i,j = u
 
