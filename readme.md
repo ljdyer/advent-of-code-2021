@@ -160,6 +160,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <td>
       <a href="/solutions/day14/solution-unfinished.py">On the day</a> |
        <a href="/solutions/day14/solution-part-one-tidied.py">Tidied up</a> |
+        <span style="color:gray">YouTube</span>
     </td>
   </tr>
   </tr>
