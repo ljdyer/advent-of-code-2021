@@ -11,7 +11,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 - Puzzles are released at 5am GMT (midnight EST) each day. If the start time is the same as the actual time in the table below, I was awake and began working on my solution at 5am and the rank includes only others who started at the same time. If the start and actual time are different, I began working on my solution later in the day so the rank includes others who started before me.
 - **On the day** solutions are just an upload of the unedited code file at the time I solved the problem. **Tidied up** solutions are post-edited versions of the code that show my solution more clearly.
 - Click on the **YouTube** links to watch a recording of me solving the problems in real time. If the **YouTube** link is greyed out for a given day, it means I either haven't got around to uploading the video yet, or I wasn't able to record one on that day.
-- An actual time of '--:--:--' means that part took me a while and I gave up timing myself, but still finished it on the day.
+- The puzzles started to get harder around Day 14. Although they still seemed achievable, I had to give up on some puzzles as they were taking me to long.
 
 ## Stats & solutions
 
