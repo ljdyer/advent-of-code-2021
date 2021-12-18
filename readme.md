@@ -196,4 +196,15 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
         <span style="color:gray">YouTube</span>
     </td>
   </tr>
+  </tr>
+    <tr>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/18">Day 18</a></th>
+    <td>NOT YET</td>
+    <td>NOT YET</td>
+    <td>
+      <span style="color:gray">On the day</span> |
+       <span style="color:gray">Tidied up</span> |
+        <span style="color:gray">YouTube</span>
+    </td>
+  </tr>
 </table>
