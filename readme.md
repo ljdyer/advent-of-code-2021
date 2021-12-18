@@ -24,7 +24,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
   </tr>
   <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/1">Day 1</a></th>
-    <td bgcolor="green">00:02:24 / 00:02:24 (942)</td>
+    <td style="background:#ABEBC6">00:02:24 / 00:02:24 (942)</td>
     <td>00:07:38 / 00:07:38 (1553)</td>
     <td>
       <a href="/solutions/day1/solution-on-the-day.py">On the day</a> |
