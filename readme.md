@@ -232,4 +232,5 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 </table>
 
 *Day 13: Briefly consulted subreddit to diagnose an issue with slightly gardbled output.
+
 *Day 20: Briefly consulted subreddit because I couldn't understand requirement around dealing with infinite light border from problem statement.
