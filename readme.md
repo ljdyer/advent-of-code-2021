@@ -145,7 +145,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/13">Day 13</a></th>
     <td>01:33:34 / 01:33:34 (8252)</td>
-    <td>02:35:16 / 02:35:16 (9840)</td>
+    <td>02:35:16 / 02:35:16 (9840)*</td>
     <td>
       <a href="/solutions/day13/solution-on-the-day.py">On the day</a> |
        <a href="/solutions/day13/solution-tidied.py">Tidied up</a> |
@@ -230,4 +230,6 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     </td>
   </tr>
 </table>
-*Consulted subreddit because I couldn't understand requirement around dealing with infinite light border from problem statement.
+
+*Day 13: Briefly consulted subreddit to diagnose an issue with slightly gardbled output.
+*Day 20: Briefly consulted subreddit because I couldn't understand requirement around dealing with infinite light border from problem statement.
