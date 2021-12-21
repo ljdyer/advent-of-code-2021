@@ -229,6 +229,17 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
         <span style="color:gray">YouTube</span>
     </td>
   </tr>
+  </tr>
+    <tr>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/21">Day 21</a></th>
+    <td>00:29:14 / 00:42:14 (3923)</td>
+    <td>NOT YET</td>
+    <td>
+      <a href="/solutions/day21/solution-on-the-day.py">On the day</a> |
+       <span style="color:gray">Tidied up</span> |
+        <span style="color:gray">YouTube</span>
+    </td>
+  </tr>
 </table>
 
 *Day 13: Briefly consulted subreddit to diagnose an issue with slightly gardbled output.
