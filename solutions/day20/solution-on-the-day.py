@@ -106,9 +106,10 @@ def print_image(image):
 def add_blanks(image):
     
     for i in range(len(image)):
-        image[i] = '..' + image[i] + '..'
+        image[i] = '.' + image[i] + '.'
     width = len(image[0])
-    image = ['.' * width] * 2 + image + ['.' * width] * 2
+    image = ['.' * width] + image + ['.' * width]
+    print(image)
     return image
 
 # ===============================
@@ -122,8 +123,6 @@ def count_light(image) -> int:
 # ===============================
 def convert_image(image):
 
-    image = add_blanks(image)
-    image = add_blanks(image)
     image = add_blanks(image)
 
     height = len(image)
@@ -150,8 +149,8 @@ def convert_image(image):
 # test_get_decimal()
 # test_get_output_pixel()
 
-lines = get_lines_from_file("data.txt")
-# lines = get_lines_from_file("test.txt")
+# lines = get_lines_from_file("data.txt")
+lines = get_lines_from_file("test.txt")
 blank_line = lines.index('')
 algorithm = ''.join(lines[:blank_line])
 image = lines[blank_line+1:]
@@ -163,19 +162,9 @@ height = len(image)
 
 border_start = 2
 converted = image
-for i in range(50):
+for i in range(2):
     converted = convert_image(converted)
-    border_start = border_start + 3
+    print_image(converted)
 
-# print_image(converted)
 print_image(converted)
-
-width = len(converted[0])
-height = len(converted)
-converted = [row[border_start:width-border_start] for row in converted[border_start:height-border_start]]
-
-# print(len(converted[0]))
-# print(len(converted))
-# print_image(converted)
-
 print(count_light(converted))
