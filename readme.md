@@ -99,7 +99,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
   <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/8">Day 8</a></th>
     <td>00:09:53 / 01:09:03 (11973)</td>
-    <td>around 1 hr 45 mins /<br>10:19:39 (23567)</td>
+    <td>around 01:45:00 /10:19:39 (23567)</td>
     <td>
       <a href="/solutions/day8/solution-on-the-day.py">On the day</a> |
        <a href="/solutions/day8/solution-tidied.py">Tidied up</a> |
@@ -252,6 +252,39 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <td>
       <a href="/solutions/day22/solution-on-the-day.py">On the day</a> |
        <a href="/solutions/day22/solution-tidied.py">Tidied up</a> |
+        <span style="color:gray">YouTube</span>
+    </td>
+  </tr>
+  </tr>
+    <tr>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/23">Day 16</a></th>
+    <td>NOT YET</td>
+    <td>NOT YET</td>
+    <td>
+      <span style="color:gray">On the day</span> |
+       <span style="color:gray">Tidied up</span> |
+        <span style="color:gray">YouTube</span>
+    </td>
+  </tr>
+  </tr>
+    <tr>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/24">Day 16</a></th>
+    <td>NOT YET</td>
+    <td>NOT YET</td>
+    <td>
+      <span style="color:gray">On the day</span> |
+       <span style="color:gray">Tidied up</span> |
+        <span style="color:gray">YouTube</span>
+    </td>
+  </tr>
+  </tr>
+    <tr>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/25">Day 16</a></th>
+    <td>NOT YET</td>
+    <td>NOT YET</td>
+    <td>
+      <span style="color:gray">On the day</span> |
+       <span style="color:gray">Tidied up</span> |
         <span style="color:gray">YouTube</span>
     </td>
   </tr>
