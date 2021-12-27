@@ -241,7 +241,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <td>
       <a href="/solutions/day21/solution-on-the-day.py">On the day</a> |
        <span style="color:gray">Tidied up</span> |
-        <span style="color:gray">YouTube</span>
+        <a href="https://youtu.be/RA-KA3l1Go0">YouTube</a>
     </td>
   </tr>
   </tr>
