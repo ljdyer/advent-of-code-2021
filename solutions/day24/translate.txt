@@ -1,0 +1,252 @@
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 1)
+x = x + 12
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 6
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 1)
+x = x + 10
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 6
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 1)
+x = x + 13
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 3
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 26)
+add x -11
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 11
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 1)
+x = x + 13
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 9
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 26)
+add x -1
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 3
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 1)
+x = x + 10
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 13
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 1)
+x = x + 11
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 6
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 26)
+x = x + 0
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 14
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 1)
+x = x + 10
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 10
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 26)
+add x -5
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 12
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 26)
+add x -16
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 10
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 26)
+add x -7
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 11
+y = y * x
+z = z + y
+w = int(input.pop(0))
+x = x * 0
+x = x + z
+x = x % 26
+z = math.floor(z / 26)
+add x -11
+x = bool(x==w)
+x = bool(x==0)
+y = y * 0
+y = y + 25
+y = y * x
+y = y + 1
+z = z * y
+y = y * 0
+y = y + w
+y = y + 15
+y = y * x
+z = z + y

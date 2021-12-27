@@ -6,12 +6,16 @@ In the words of its creator Eric Wastl:
 
 I discovered Advent of Code just before the <a href="https://adventofcode.com/2021">2021</a> installment, and decided to challenge myself to complete every solution on the day of release in the shortest time possible and to publish the results here.
 
+## Results as of 25th December 2021
+
+- Up until 25th December 2021, I completed the puzzles using my own knowledge without any external help, with a couple of minor exceptions noted underneath the table below.
+- I got <span style="color:gold"><b>33 gold stars</b></span>, all earned on the same day that the puzzle was released.
+- Results for up to 25th December are the entries in **white** in the table below. If the time says ??:??:??, it just means I stopped timing myself for that part.
+
 ## Points to note
 
 - Puzzles are released at 5am GMT (midnight EST) each day. If the start time is the same as the actual time in the table below, I was awake and began working on my solution at 5am and the rank includes only others who started at the same time. If the start and actual time are different, I began working on my solution later in the day so the rank includes others who started before me.
-- **On the day** solutions are just an upload of the unedited code file at the time I solved the problem. **Tidied up** solutions are post-edited versions of the code that show my solution more clearly.
-- Click on the **YouTube** links to watch a recording of me solving the problems in real time. If the **YouTube** link is greyed out for a given day, it means I either haven't got around to uploading the video yet, or I wasn't able to record one on that day.
-- The puzzles started to get harder around Day 14. Although they still seemed achievable, I had to give up on some puzzles as they were taking me to long.
+- **On the day** solutions are just an upload of the unedited code file at the time I solved the problem. **Tidied up** solutions are post-edited versions of the code that show my solution more clearly. Click on the **YouTube** links to watch a recording of me solving the problems in real time.
 
 ## Stats & solutions
 

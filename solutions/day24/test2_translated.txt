@@ -1,0 +1,4 @@
+z = int(input_.pop(0))
+x = int(input_.pop(0))
+z = z * 3
+z = int(z==x)
