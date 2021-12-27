@@ -10,7 +10,12 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 
 - Up until 25th December 2021, I completed the puzzles using my own knowledge without any external help, with a couple of minor exceptions noted underneath the table below.
 - I got **33 gold stars**, all earned on the same day that the puzzle was released.
-- If the time says ??:??:??, it just means I stopped timing myself for that part.
+- Times for solutions before 25th December 2021 are shown in light text in the format [actual time/official time (rank)]. If the time says ??:??:??, it just means I stopped timing myself for that part.
+
+## Finishing the problems
+
+- From 25th December 2021, I began completing the problems I had not been able to solve on my own by referring to other people's tutorials and solutions.
+- Solutions after 25th December 2021 are included in bold text in the format [date solved (rank)].
 
 ## Points to note
 
@@ -160,11 +165,8 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/14">Day 14</a></th>
     <td>00:08:31 / 02:48:31 (13540)</td>
-    <td>NOT YET</td>
+    <td>**27th December 2021 (41540)**</td>
     <td>
-      <a href="/solutions/day14/solution-unfinished.py">On the day</a> |
-       <a href="/solutions/day14/solution-part-one-tidied.py">Tidied up</a> |
-        <span style="color:gray">YouTube</span>
     </td>
   </tr>
   </tr>
