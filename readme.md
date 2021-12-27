@@ -257,7 +257,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
   </tr>
   </tr>
     <tr>
-    <th scope="row"><a href="https://adventofcode.com/2021/day/23">Day 16</a></th>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/23">Day 23</a></th>
     <td>NOT YET</td>
     <td>NOT YET</td>
     <td>
@@ -268,7 +268,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
   </tr>
   </tr>
     <tr>
-    <th scope="row"><a href="https://adventofcode.com/2021/day/24">Day 16</a></th>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/24">Day 24</a></th>
     <td>NOT YET</td>
     <td>NOT YET</td>
     <td>
@@ -279,7 +279,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
   </tr>
   </tr>
     <tr>
-    <th scope="row"><a href="https://adventofcode.com/2021/day/25">Day 16</a></th>
+    <th scope="row"><a href="https://adventofcode.com/2021/day/25">Day 25</a></th>
     <td>NOT YET</td>
     <td>NOT YET</td>
     <td>
