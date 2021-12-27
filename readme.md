@@ -9,8 +9,8 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 ## Results as of 25th December 2021
 
 - Up until 25th December 2021, I completed the puzzles using my own knowledge without any external help, with a couple of minor exceptions noted underneath the table below.
-- I got <span style="color:gold !important"><b>33 gold stars</b></span>, all earned on the same day that the puzzle was released.
-- Results for up to 25th December are the entries in **white** in the table below. If the time says ??:??:??, it just means I stopped timing myself for that part.
+- I got **33 gold stars**, all earned on the same day that the puzzle was released.
+- If the time says ??:??:??, it just means I stopped timing myself for that part.
 
 ## Points to note
 
