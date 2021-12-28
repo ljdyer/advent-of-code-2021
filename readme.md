@@ -167,17 +167,16 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <td>00:08:31 / 02:48:31 (13540)</td>
     <td>**27th December 2021 (41540)**</td>
     <td>
+      <a href="/solutions/day14/">Solutions</a>
     </td>
   </tr>
   </tr>
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/15">Day 15</a></th>
     <td>01:02:09 / 01:02:09 (3999)</td>
-    <td>NOT YET</td>
+    <td>**28th December 2021 (34521)**</td>
     <td>
-      <a href="/solutions/day15/solution-unfinished.py">On the day</a> |
-       <span style="color:gray">Tidied up</span> |
-        <span style="color:gray">YouTube</span>
+      <a href="/solutions/day15/">Solutions</a>
     </td>
   </tr>
   </tr>

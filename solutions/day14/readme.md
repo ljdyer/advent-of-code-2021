@@ -1,3 +1,9 @@
+# --- Day 14: Extended Polymerization ---
+
+## Problem statement
+
+[here](https://adventofcode.com/2021/day/14).
+
 ## Part One
 
 Solved using the naive method of generating the full string for each step.
