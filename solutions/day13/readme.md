@@ -2,7 +2,7 @@
 
 ## Problem statement
 
-[here](https://adventofcode.com/2021/day/13).
+[here](https://adventofcode.com/2021/day/13)
 
 ## Part One
 

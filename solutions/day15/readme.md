@@ -2,13 +2,15 @@
 
 ## Problem statement
 
-[here](https://adventofcode.com/2021/day/15).
+[here](https://adventofcode.com/2021/day/15)
 
 ## Part One
 
 Solved by implementing Djikstra's algorithm based on the [psuedocode](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#Pseudocode) on Wikipedia.
 
 See the code [here](solution-part-one.py).
+
+See it on YouTube [here](https://youtu.be/B1WDBb_WjTM).
 
 ## Part Two
 
