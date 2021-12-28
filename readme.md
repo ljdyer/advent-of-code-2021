@@ -27,8 +27,8 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 <table style="margin-left:auto; margin-right:auto">
   <tr>
     <td></td>
-    <th style="text-align:center">Part 1 time<br>[actual / official (rank)]</th>
-    <th style="text-align:center">Part 2 time<br>[actual / official (rank)]</th>
+    <th style="text-align:center">Part 1</th>
+    <th style="text-align:center">Part 2</th>
     <th style="text-align:center">Solution</th>
   </tr>
   <tr>
