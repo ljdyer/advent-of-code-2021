@@ -174,7 +174,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/15">Day 15</a></th>
     <td>01:02:09 / 01:02:09 (3999)</td>
-    <td>**28th December 2021 (34521)**</td>
+    <td><b>28th December 2021 (34521)</b></td>
     <td>
       <a href="/solutions/day15/">Solutions</a>
     </td>
