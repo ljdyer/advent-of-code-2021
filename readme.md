@@ -14,7 +14,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 
 ## Finishing the problems
 
-- From 25th December 2021, I began completing the problems I had not been able to solve on my own by referring to other people's tutorials and solutions.
+- From 25th December 2021, I began completing the problems I had not been able to solve on my own with help from other people's tutorials and solutions.
 - Solutions after 25th December 2021 are included in bold text in the format [date solved (rank)].
 
 ## Points to note
