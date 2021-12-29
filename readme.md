@@ -15,7 +15,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 ## Finishing the problems
 
 - From 25th December 2021, I began completing the problems I had not been able to solve on my own with help from other people's tutorials and solutions.
-- Solutions after 25th December 2021 are included in bold text in the format [date solved (rank)].
+- Solutions after 25th December 2021 are included in **bold** text in the format **[date solved (rank)]**.
 - I currently have **36 gold stars** in total.
 
 ## Points to note
@@ -165,7 +165,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/14">Day 14</a></th>
     <td>00:08:31 / 02:48:31 (13540)</td>
-    <td><b>27th December 2021 (41540)</b></td>
+    <td><b>27th Dec 2021 (41540)</b></td>
     <td>
       <a href="/solutions/day14/">Solutions</a>
     </td>
@@ -174,7 +174,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/15">Day 15</a></th>
     <td>01:02:09 / 01:02:09 (3999)</td>
-    <td><b>28th December 2021 (34521)</b></td>
+    <td><b>28th Dec 2021 (34521)</b></td>
     <td>
       <a href="/solutions/day15/">Solutions</a>
     </td>
@@ -281,7 +281,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
   </tr>
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/25">Day 25</a></th>
-    <td><b>29th December 2021 (13044)</b></td>
+    <td><b>29th Dec 2021 (13044)</b></td>
     <td>NOT YET</td>
     <td>
       <a href="/solutions/day25/">Solutions</a>
