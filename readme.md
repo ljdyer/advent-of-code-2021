@@ -16,6 +16,7 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 
 - From 25th December 2021, I began completing the problems I had not been able to solve on my own by referring to other people's tutorials and solutions.
 - Solutions after 25th December 2021 are included in bold text in the format [date solved (rank)].
+- I currently have **36 gold stars** in total.
 
 ## Points to note
 
@@ -280,12 +281,10 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
   </tr>
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/25">Day 25</a></th>
-    <td>NOT YET</td>
+    <td><b>29th December 2021 (13044)</b></td>
     <td>NOT YET</td>
     <td>
-      <span style="color:gray">On the day</span> |
-       <span style="color:gray">Tidied up</span> |
-        <span style="color:gray">YouTube</span>
+      <a href="/solutions/day25/">Solutions</a>
     </td>
   </tr>
 </table>

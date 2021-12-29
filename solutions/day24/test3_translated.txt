@@ -1,11 +1,11 @@
 w = int(input_.pop(0))
 z = z + w
 z = z % 2
-w = math.floor(w / 2)
+w = w // 2
 y = y + w
 y = y % 2
-w = math.floor(w / 2)
+w = w // 2
 x = x + w
 x = x % 2
-w = math.floor(w / 2)
+w = w // 2
 w = w % 2

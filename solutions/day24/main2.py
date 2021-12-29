@@ -263,16 +263,16 @@ def MONAD(input_: str):
     y = y * x
     z = z + y
 
-    if z == 0:
-        return True
-    else:
-        return False
+    return z
 
 
 
-inputs = (str(x) for x in range(99999999999999,11111111111111,-1) if not '0' in str(x))
+# inputs = (str(x) for x in range(99999999999999,11111111111111,-1) if not '0' in str(x))
 
-for i in inputs:
-    if MONAD(i):
-        print(i)
-        quit()
+# for i in inputs:
+#     if MONAD(i):
+#         print(i)
+#         quit()
+
+print(MONAD(str(11111111111111)))
+print(MONAD(str(99999999999999)))
