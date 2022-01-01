@@ -8,7 +8,7 @@
 
 Like most people, I solved the test problems fairly quickly but was surprised by the unexpected border that was created when I ran the program on my actual data.
 
-I solved part one by manually trimming the border from the output image.
+I solved Part One by manually trimming the border from the output image.
 
 ## Part Two
 
