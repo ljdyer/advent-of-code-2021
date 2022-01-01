@@ -227,9 +227,9 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/20">Day 20</a></th>
     <td>??:??:?? / 01:37:36 (3269)*</td>
-    <td>1st January 2022 (20561)</td>
+    <td><b>1st January 2022 (20561)</b></td>
     <td>
-      <a href="/solutions/day20"><b>Solutions</b></a>
+      <a href="/solutions/day20">Solutions</a>
     </td>
   </tr>
   </tr>
