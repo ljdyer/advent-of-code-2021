@@ -14,7 +14,7 @@ def get_lines_from_file(file: str) -> list:
 def write_lines_to_file(file: str, lines: list): 
     """Save list of lines to a text file"""
 
-    with open("new.txt", "w", encoding='utf-8', ) as file:
+    with open(file, "w", encoding='utf-8') as file:
         file.write("\n".join(lines))
 
 

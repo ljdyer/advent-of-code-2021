@@ -8,15 +8,15 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
 
 ## Results as of 25th December 2021
 
-- Up until 25th December 2021, I completed the puzzles using my own knowledge without any external help, with a couple of minor exceptions noted underneath the table below.
-- I got **33 gold stars**, all earned on the same day that the puzzle was released.
-- Times for solutions before 25th December 2021 are shown in light text in the format [actual time/official time (rank)]. If the time says ??:??:??, it just means I stopped timing myself for that part.
+- Up until 25th December 2021, I attempted to complete all of the puzzles on my own on the same day they were released.
+- I finished up with **33 gold stars**.
+- Times for solutions before 25th December 2021 are shown in light text in the format [actual time/official time (rank)]. If the time says ??:??:??, it just means I stopped timing myself for that part but stil completed it on the same day.
 
 ## Finishing the problems
 
-- From 25th December 2021, I began completing the problems I had not been able to solve on my own with help from other people's tutorials and solutions.
+- From 25th December 2021, I began completing the problems I had not been able to solve, getting advice from the subreddit, YouTube videos of solutions, etc. where necessary.
 - Solutions after 25th December 2021 are included in **bold** text in the format **[date solved (rank)]**.
-- I currently have **36 gold stars** in total.
+- I currently have **37 gold stars** in total.
 
 ## Points to note
 
@@ -227,11 +227,9 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/20">Day 20</a></th>
     <td>??:??:?? / 01:37:36 (3269)*</td>
-    <td>NOT YET</td>
+    <td>1st January 2022 (20561)</td>
     <td>
-      <a href="/solutions/day20/solution-on-the-day.py">On the day</a> |
-       <span style="color:gray">Tidied up</span> |
-        <span style="color:gray">YouTube</span>
+      <a href="/solutions/day20">Solutions</a>
     </td>
   </tr>
   </tr>
@@ -288,7 +286,3 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
     </td>
   </tr>
 </table>
-
-*Day 13: Briefly consulted subreddit to diagnose an issue with slightly garbled output.
-
-*Day 20: Briefly consulted subreddit because I couldn't understand requirement around dealing with infinite light border from problem statement.

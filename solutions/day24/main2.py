@@ -266,6 +266,67 @@ def MONAD(input_: str):
     return z
 
 
+def get(i):
+    x = 0
+    z = 0
+    i = list(map(int, list(i)))
+
+    z = (i[0]*26 + i[1])*26 + i[2] + 4215
+
+    if i[3] == z % 26 - 11:
+        z = z // 26
+    else:
+        z = (z // 26) * 26 + i[3] + 11
+    # 9891 -> 405
+    
+    z = z * 26 + i[4] + 9
+
+    if i[5] == z % 26 - 1:
+        z = z // 26
+    else:
+        z = (z // 26) * 26 + i[5] + 3
+    # 989119 -> 404
+
+    z = z * 26 + i[6] + 13
+
+    z = z * 26 + i[7] + 7
+
+
+
+    if i[8] == z % 26:
+        z = z // 26
+    else:
+        z = (z // 26) * 26 + i[8] + 14
+
+
+    z = z * 26 + i[9] + 10
+
+
+    if i[10] == z % 26 - 5:
+        z = z // 26
+    else:
+        z = (z // 26) * 26 + i[10] + 12
+
+    return z
+    
+
+    if i[11] == z % 26 - 16:
+        z = z // 26
+    else:
+        z = (z // 26) * 26 + i[11] + 10
+
+    if i[12] == z % 26 - 7:
+        z = z // 26
+    else:
+        z = (z // 26) * 26 + i[12] + 11
+
+    if i[13] == z % 26 - 11:
+        z = z // 26
+    else:
+        z = (z // 26) * 26 + i[13] + 15
+
+    return z
+
 
 # inputs = (str(x) for x in range(99999999999999,11111111111111,-1) if not '0' in str(x))
 
@@ -274,5 +335,8 @@ def MONAD(input_: str):
 #         print(i)
 #         quit()
 
-print(MONAD(str(11111111111111)))
-print(MONAD(str(99999999999999)))
+# for i in ['11111111111111', '22222222222222', '99999999999999']:
+#     print(MONAD(str(i)))
+#     print(get(str(i)))
+
+print(get('98911911849'))

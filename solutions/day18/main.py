@@ -28,7 +28,7 @@ def iterate_sublists(l, depth=1, i_s=None):
             for i in i_s:
                 e_ = e_[i]
             e_[index] = split(e_[index])
-            assert False
+            # assert False
 
         # Explode
         if len(i_s) == 3 and isinstance(e, list):
@@ -80,7 +80,7 @@ def iterate_sublists(l, depth=1, i_s=None):
             elif i_s[0] == 0 and isinstance(my_list[1], list):
                 my_list[1][0] += old_right
             my_list[i_s[0]][i_s[1]][i_s[2]][index] = 0
-            assert False
+            # assert False
 
         if isinstance(e,list):
             iterate_sublists(e, depth+1, i_s=i_s+[index])

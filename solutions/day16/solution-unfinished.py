@@ -18,7 +18,6 @@ def bin_to_dec(b):
 # ====================
 def get_encoding(x, as_bin=False):
 
-
     if as_bin:
         b = x
     else:
@@ -118,9 +117,9 @@ def parse_lit_val(b):
     return bin_to_dec(all)
         
 os.system('cls')
-# get_encoding('D2FE28')          # Lit
-# get_encoding('38006F4529120')  # Op
-# get_encoding('EE00D40C823060')  # Op
+get_encoding('D2FE28')          # Lit
+get_encoding('38006F4529120')  # Op
+get_encoding('EE00D40C823060')  # Op
 # print(hex_to_bin('620080001611562C8802118E34'))
 
 # print()
