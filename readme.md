@@ -257,12 +257,10 @@ I discovered Advent of Code just before the <a href="https://adventofcode.com/20
   </tr>
     <tr>
     <th scope="row"><a href="https://adventofcode.com/2021/day/23">Day 23</a></th>
-    <td>NOT YET</td>
+    <td><b>2nd January 2021 (13515)</td>
     <td>NOT YET</td>
     <td>
-      <span style="color:gray">On the day</span> |
-       <span style="color:gray">Tidied up</span> |
-        <span style="color:gray">YouTube</span>
+      <a href="/solutions/day23/">Solutions</a>
     </td>
   </tr>
   </tr>
