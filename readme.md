@@ -1,6 +1,4 @@
-# Advent of Code 2021
-
-Current star count: <img src="stars.PNG">
+# Advent of Code 2021 <img src="stars.PNG">
 
 In the words of its creator Eric Wastl:
 
