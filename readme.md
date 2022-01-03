@@ -14,6 +14,7 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
 - Solutions after the day of release of the puzzle are included in **bold** text in the format **[date solved (rank)]**.
 - Puzzles were released at 5am GMT (midnight EST) each day. If the start time is the same as the actual time in the table below, I was awake and began working on my solution at 5am and the rank includes only others who started at the same time. If the start and actual time are different, I began working on my solution later in the day so the rank includes others who started before me.
 - The links in the first column of the table link either to a readme file with a description of my solution, or directly to the finished/unfinished source code. You can also find original versions of the source code, etc. in the subfolder for each day in <a  href="/solutions">this folder</a>.
+- I solved most of the puzzles by myself, but have commented and mentioned my sources in the readme files for cases where I got a little help.
 - I also recorded myself solving some of the problems and created a YouTube playlist [here](https://www.youtube.com/watch?v=IhhJfaYf4XU&list=PLqVT60R9nVJDvFUBUTh4BjA4W-IEL91gS).
 
 ## Stats & solutions
