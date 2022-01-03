@@ -27,19 +27,19 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
   </tr>
 
   <tr>
-    <th scope="row"><a href="/solutions/day1/solution-tidied.py">Day 1</a></th>
+    <th scope="row"><a href="/solutions/day1/">Day 1</a></th>
     <td>00:02:24 / 00:02:24 (942)</td>
     <td>00:07:38 / 00:07:38 (1553)</td>
   </tr>
 
   <tr>
-    <th scope="row"><a href="/solutions/day2/solution-tidied.py">Day 2</a></th>
+    <th scope="row"><a href="/solutions/day2/">Day 2</a></th>
     <td>00:05:15 / 00:05:15 (3354)</td>
     <td>00:07:01 / 00:07:01 (2180)</td>
   </tr>
 
   <tr>
-    <th scope="row"><a href="/solutions/day3/solution-tidied.py">Day 3</a></th>
+    <th scope="row"><a href="/solutions/day3/">Day 3</a></th>
     <td>00:08:50 / 00:53:54 (13726)</td>
     <td>00:18:40 / 01:03:42 (7012)</td>
   </tr>

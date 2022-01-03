@@ -1,6 +1,7 @@
 import nltk
 import re
 
+
 # ====================
 def get_lines_from_file(file: str) -> list:
     """Get the lines from a text file"""
@@ -11,7 +12,7 @@ def get_lines_from_file(file: str) -> list:
 
 
 # ====================
-def write_lines_to_file(file: str, lines: list): 
+def write_lines_to_file(file: str, lines: list):
     """Save list of lines to a text file"""
 
     with open("new.txt", "w", encoding='utf-8', ) as file:

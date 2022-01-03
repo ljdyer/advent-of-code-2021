@@ -1,7 +1,23 @@
-from helper import *
+from re import findall
+
+
+# ====================
+def get_lines_from_file(file: str) -> list:
+    """Get the lines from a text file"""
+
+    with open(file, encoding='utf-8') as file:
+        lines = file.read().splitlines()
+    return lines
+
+
+# ====================
+def get_groups(regex, text) -> tuple:
+
+    return findall(regex, text)[0]
+
 
 # Get data
-lines = get_lines_from_file("data.txt")
+lines = get_lines_from_file("data/data.txt")
 
 # Parse input strings
 reg = r'(\w*) (\d*)'
