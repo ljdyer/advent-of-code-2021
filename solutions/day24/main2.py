@@ -46,6 +46,7 @@ def MONAD(input_: str):
     y = y + 6
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -64,6 +65,7 @@ def MONAD(input_: str):
     y = y + 3
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -82,6 +84,7 @@ def MONAD(input_: str):
     y = y + 11
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -100,6 +103,7 @@ def MONAD(input_: str):
     y = y + 9
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -118,6 +122,7 @@ def MONAD(input_: str):
     y = y + 3
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -136,6 +141,7 @@ def MONAD(input_: str):
     y = y + 13
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -154,6 +160,7 @@ def MONAD(input_: str):
     y = y + 6
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -172,6 +179,7 @@ def MONAD(input_: str):
     y = y + 14
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -190,6 +198,7 @@ def MONAD(input_: str):
     y = y + 10
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -208,6 +217,7 @@ def MONAD(input_: str):
     y = y + 12
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -226,6 +236,7 @@ def MONAD(input_: str):
     y = y + 10
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -244,6 +255,7 @@ def MONAD(input_: str):
     y = y + 11
     y = y * x
     z = z + y
+
     w = int(input_.pop(0))
     x = x * 0
     x = x + z
@@ -271,7 +283,9 @@ def get(i):
     z = 0
     i = list(map(int, list(i)))
 
-    z = (i[0]*26 + i[1])*26 + i[2] + 4215
+    z = z * 26 + i[0] + 6
+    z = z * 26 + i[1] + 6
+    z = z * 26 + i[2] + 3
 
     if i[3] == z % 26 - 11:
         z = z // 26
@@ -288,10 +302,7 @@ def get(i):
     # 989119 -> 404
 
     z = z * 26 + i[6] + 13
-
     z = z * 26 + i[7] + 7
-
-
 
     if i[8] == z % 26:
         z = z // 26
@@ -306,9 +317,6 @@ def get(i):
         z = z // 26
     else:
         z = (z // 26) * 26 + i[10] + 12
-
-    return z
-    
 
     if i[11] == z % 26 - 16:
         z = z // 26
@@ -335,8 +343,11 @@ def get(i):
 #         print(i)
 #         quit()
 
-# for i in ['11111111111111', '22222222222222', '99999999999999']:
-#     print(MONAD(str(i)))
-#     print(get(str(i)))
+for i in ['99911993949684']:
+    print(MONAD(str(i)))
+    print(get(str(i)))
 
-print(get('98911911849'))
+# for x in (str(x) for x in range(99999999999999,11111111111111,-1) if not '0' in str(x)):
+#     if get(x) == 0:
+#         print(x)
+#         break
