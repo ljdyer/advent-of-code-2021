@@ -4,7 +4,7 @@
 
 [here](https://adventofcode.com/2021/day/24)
 
-## Part One
+## Solution
 
 I started by writing the [translate_all.py](solution/translate_all.py) module to 'translate' the sample and actual MONADs into Python and simplify where possible using regular expressions. E.g.:
 
