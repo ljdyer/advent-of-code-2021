@@ -124,7 +124,7 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
   </tr>
 
   <tr>
-    <th scope="row"><a href="/solutions/day17/solution-unfinished.py">Day 17</a></th>
+    <th scope="row"><a href="/solutions/day17">Day 17</a></th>
     <td>00:55:49 / 01:27:49 (5126)</td>
     <td>??:??:?? / 15:52:01 (17995)</td>
   </tr>
