@@ -1,5 +1,7 @@
 import re
 
+
+# ====================
 def translate_alu(source_file: str, target_file: str):
 
     with open(source_file, encoding='utf-8') as file:
@@ -15,11 +17,14 @@ def translate_alu(source_file: str, target_file: str):
         (r'div (\w) (\S+)', r'\1 = \1 // \2'),      # div
         (r'mod (\w) (\S+)', r'\1 = \1 % \2'),       # mod
         (r'eql (\w) (\S+)', r'\1 = int(\1==\2)'),   # eql
-        (r'(\S) = 0\n\1 = \1 \+ (\S+)', r'\1 = \2'),# set to zero then add something
+        (r'(\S) = 0\n\1 = \1 \+ (\S+)', r'\1 = \2'),# set to zero then add
+                                                    # something
         (r'(\S) = (\S+)\n\1 = \1 ([\*\+\-%]) (\S+)', r'\1 = \2 \3 \4'),
-                                                    # set to value then do another operation
+                                                    # set to value then do
+                                                    # another operation
         (r'(\S) = (\S+) ([\*%]) (\S+)\n\1 = \1 \+ (\S+)', r'\1 = \2 \3 \4 + \5'),
-                                                    # multiply or divide then add
+                                                    # multiply or divide then
+                                                    # add
         (r'(\S) = (\S+) \+ (\S+)\n\1 = \1 \* (\S+)', r'\1 = (\2 + \3) * \4'),
                                                     # add then multiply
         (r'x = int\(x==w\)\nx = int\(x==0\)', r'x = int(x!=w)')
@@ -33,7 +38,7 @@ def translate_alu(source_file: str, target_file: str):
         file.write(alu)
 
 
-translate_alu('test1.txt', 'test1_translated.txt')
-translate_alu('test2.txt', 'test2_translated.txt')
-translate_alu('test3.txt', 'test3_translated.txt')
+translate_alu('tests/test1.txt', 'tests/test1_translated.txt')
+translate_alu('tests/test2.txt', 'tests/test2_translated.txt')
+translate_alu('tests/test3.txt', 'tests/test3_translated.txt')
 translate_alu('data.txt', 'data_translated.txt')

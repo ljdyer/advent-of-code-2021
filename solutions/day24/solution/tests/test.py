@@ -1,7 +1,7 @@
-from helper import *
 import math
 
 
+# ====================
 def test1(input_: str):
 
     input_ = list(input_)
@@ -14,7 +14,7 @@ def test1(input_: str):
     return {'x': x, 'y': y, 'z': z, 'w': w}
 
 
-
+# ====================
 def test2(input_: str):
 
     input_ = list(input_)
@@ -25,11 +25,11 @@ def test2(input_: str):
     z = int(input_.pop(0))
     x = int(input_.pop(0))
     z = z * 3
-    z = int(z==x)
+    z = int(z == x)
     return {'x': x, 'y': y, 'z': z, 'w': w}
 
 
-
+# ====================
 def test3(input_: str):
 
     input_ = list(input_)
@@ -51,9 +51,8 @@ def test3(input_: str):
     return {'x': x, 'y': y, 'z': z, 'w': w}
 
 
-# Test 1
-# For example, here is an ALU program which takes an input number, negates it,
-# and stores it in x:
+# Test 1 For example, here is an ALU program which takes an input number,
+# negates it, and stores it in x:
 print(test1('7'))
 print(test1('3'))
 
