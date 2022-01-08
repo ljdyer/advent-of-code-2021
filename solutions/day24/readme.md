@@ -52,17 +52,17 @@ I got stuck with what to do next so consulted the subreddit. Thank you to [Julie
 1	z = w1+6
 2	z = w1+6 . w2+6
 3	z = w1+6 . w2+6 . w3+3
-4	z = w1+6 . w2+6 		        provided w4 = w3 - 8
+4	z = w1+6 . w2+6				provided w4 = w3 - 8
 5	z = w1+6 . w2+6 . w5+9
-6	z = w1+6 . w2+6 		        provided w6 = w5 + 8
+6	z = w1+6 . w2+6				provided w6 = w5 + 8
 7	z = w1+6 . w2+6 . w7 + 13
 8	z = w1+6 . w2+6 . w7+13 . w8+7
-9	z = w1+6 . w2+6 . w7+13		    provided w9 = w8 + 6
+9	z = w1+6 . w2+6 . w7+13			provided w9 = w8 + 6
 10	z = w1+6 . w2+6 . w7+13 . w10+10
-11	z = w1+6 . w2+6 . w7+13		    provided w11 = w10 + 5
-12	z = w1+6 . w2+6			        provided w12 = w7 - 3
-13	z = w1+6			            provided w13 = w2 - 1
-14	z = 0				            provided w14 = w1 - 5
+11	z = w1+6 . w2+6 . w7+13			provided w11 = w10 + 5
+12	z = w1+6 . w2+6				provided w12 = w7 - 3
+13	z = w1+6				provided w13 = w2 - 1
+14	z = 0					provided w14 = w1 - 5
 ```
 
 From here I was able to derive the maximum and minimum solutions in my head.
