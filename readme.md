@@ -151,7 +151,7 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
   <tr>
     <th scope="row"><a href="/solutions/day21/solution-part-one-tidied.py">Day 21</a></th>
     <td>00:29:14 / 00:42:14 (3923)</td>
-    <td>NOT YET</td>
+    <td><b>10th January 2022 (18450)</b></td>
   </tr>
 
   <tr>

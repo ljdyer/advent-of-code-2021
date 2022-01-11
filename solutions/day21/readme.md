@@ -1,0 +1,1 @@
+Inspired by [comment](https://www.reddit.com/r/adventofcode/comments/rl6p8y/comment/hpmz19t/?utm_source=share&utm_medium=web2x&context=3) from [msschmitt](https://www.reddit.com/user/msschmitt/).
