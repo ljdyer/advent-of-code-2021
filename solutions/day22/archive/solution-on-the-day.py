@@ -1,8 +1,8 @@
 from helper import *
 
 regex = r"(on|off) x=(\-?\d+)..(\-?\d+),y=(\-?\d+)..(\-?\d+),z=(\-?\d+)..(\-?\d+)"
-lines = get_lines_from_file("test.txt")
-lines = get_lines_from_file("test2.txt")
+lines = get_lines_from_file("test1.txt")
+# lines = get_lines_from_file("test2.txt")
 # lines = get_lines_from_file("data.txt")
 
 # ====================
@@ -14,7 +14,7 @@ def parse_groups(groups):
 def normalize(coord):
 
     coord = int(coord)
-    coord += 500000
+    coord += 500
     return coord
 
 lines = [parse_groups(get_groups(regex, l)) for l in lines]
@@ -37,6 +37,7 @@ def count_on(three_d_matrix):
 
 # print(count_on(three_d_matrix))
 
+lines = lines[:11]
 for line in lines:
     if line[0] == 'on':
         new_val = True

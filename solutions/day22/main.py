@@ -1,119 +1,109 @@
 from helper import *
 from solution_p1 import count_on_method_one
+from copy import deepcopy
 
 regex = r"(on|off) x=(\-?\d+)..(\-?\d+),y=(\-?\d+)..(\-?\d+),z=(\-?\d+)..(\-?\d+)"
 
 
+# ====================
+class Cuboid():
+
+    # ====================
+    def __init__(self, coords):
+
+        self.x, self.X, self.y, self.Y, self.z, self.Z = coords
+
+    # ====================
+    def __str__(self):
+
+        return f'[[ ({self.x}, {self.X}), ({self.y}, {self.Y}), ({self.z}, {self.Z}) ]]'
+
+    # ====================
+    def __repr__(self):
+
+        return f'[[ ({self.x}, {self.X}), ({self.y}, {self.Y}), ({self.z}, {self.Z}) ]]'
+
+    # ====================
+    def volume(self):
+
+        return \
+            (self.X - self.x + 1) \
+          * (self.Y - self.y + 1) \
+          * (self.Z - self.z + 1) \
+
 
 # ====================
-def get_info(line):
+def read_line(line):
     """Get necessary information from lines in text file"""
 
     groups = get_groups(regex, line)
-
-    return [
-        groups[0],
-        (normalize(groups[1]), normalize(groups[2])),
-        (normalize(groups[3]), normalize(groups[4])),
-        (normalize(groups[5]), normalize(groups[6]))
-    ]
+    instruction = groups[0]
+    cuboid = Cuboid(
+        [int(c) for c in groups[1:]]
+    )
+    return (instruction, cuboid)
 
 
 # ====================
-def normalize(coord: str) -> int:
-    """Convert coordinates to integers and remove negative list indices
-    by converting from numbers between -50 and 50 to numbers between 
-    0 and 100"""
+def cubes_overlap(cube1, cube2):
 
-    coord = int(coord)
-    # coord += 50
-    return coord
+    return max(cube1.x, cube2.x) <= min(cube1.X, cube2.X) \
+    and max(cube1.y, cube2.y) <= min(cube1.Y, cube2.Y) \
+    and max(cube1.z, cube2.z) <= min(cube1.Z, cube2.Z)
 
 
 # ====================
-def count_on(three_d_matrix):
-    """Count the total number of cubes that are on in the 3D matrix"""
-
-    all_cubes = [z for x in three_d_matrix for y in x for z in y]
-    return all_cubes.count(True)
-
-
-# ====================
-
-# === Part One ===
-
-
-def union_and_intersection(cube1, cube2):
-
-    c1xl, c1xu = cube1[0]
-    c1yl, c1yu = cube1[1]
-    c1zl, c1zu = cube1[2]
-    c2xl, c2xu = cube2[0]
-    c2yl, c2yu = cube2[1]
-    c2zl, c2zu = cube2[2]
-
-    Uxl = max(c1xl, c2xl)
-    Uxu = min(c1xu, c2xu)
-    Uyl = max(c1yl, c2yl)
-    Uyu = min(c1yu, c2yu)
-    Uzl = max(c1zl, c2zl)
-    Uzu = min(c1zu, c2zu)
-
-    if Uxl <= Uxu and Uyl <= Uyu and Uzl <= Uzu:
-        union = [((Uxl, Uxu),(Uyl, Uyu),(Uzl,Uzu))]
-    else:
-        return False
+def intersection(cube1, cube2):
 
     intersection = []
-    # X axis
-    # min
-    if c1xl < Uxl:
-        intersection.append(((c1xl, Uxl-1), (c1yl, c1yu), (c1zl, c1zu)))
-        c1xl = Uxl
-    if c2xl < Uxl:
-        intersection.append(((c2xl, Uxl-1), (c2yl, c2yu), (c2zl, c2zu)))
-        c2xl = Uxl
-    # max
-    if c1xu > Uxu:
-        intersection.append(((Uxu+1, c1xu), (c1yl, c1yu), (c1zl, c1zu)))
-        c1xu = Uxu
-    if c2xu > Uxu:
-        intersection.append(((Uxu+1, c2xu), (c2yl, c2yu), (c2zl, c2zu)))
-        c2xu = Uxu
 
-    # Y axis
-    if c1yl < Uyl:
-        intersection.append(((c1xl, c1xu), (c1yl, Uyl-1), (c1zl, c1zu)))
-        c1yl = Uyl
-    if c2yl < Uyl:
-        intersection.append(((c1xl, c1xu), (c2yl, Uyl-1), (c2zl, c2zu)))
-        c2yl = Uyl
-    # max
-    if c1yu > Uyu:
-        intersection.append(((c2xl, c2xu), (Uyu+1, c1yu), (c1zl, c1zu)))
-        c1yu = Uyu
-    if c2yu > Uyu:
-        intersection.append(((c2xl, c2xu), (Uyu+1, c2yu), (c2zl, c2zu)))
-        c2yu = Uyu
+    if cube1.x < cube2.x:
+        intersection.append(Cuboid((cube1.x, cube2.x-1, cube1.y, cube1.Y, cube1.z, cube1.Z)))
+        cube1.x = cube2.x
+    if cube1.X > cube2.X:
+        intersection.append(Cuboid((cube2.X+1, cube1.X, cube1.y, cube1.Y, cube1.z, cube1.Z)))
+        cube1.X = cube2.X
+    if cube1.y < cube2.y:
+        intersection.append(Cuboid((cube1.x, cube1.X, cube1.y, cube2.y-1, cube1.z, cube1.Z)))
+        cube1.y = cube2.y
+    if cube1.Y > cube2.Y:
+        intersection.append(Cuboid((cube1.x, cube1.X, cube2.Y+1, cube1.Y, cube1.z, cube1.Z)))
+        cube1.Y = cube2.Y
+    if cube1.z < cube2.z:
+        intersection.append(Cuboid((cube1.x, cube1.X, cube1.y, cube1.Y, cube1.z, cube2.z - 1)))
+        cube1.z = cube2.z
+    if cube1.Z > cube2.Z:
+        intersection.append(Cuboid((cube1.x, cube1.X, cube1.y, cube1.Y, cube2.Z+1, cube1.Z)))
+        cube1.Z = cube2.Z
 
-    # Y axis
-    if c1zl < Uzl:
-        intersection.append(((c1xl, c1xu), (c1yl, c1yu), (c1zl, Uzl-1)))
-        c1zl = Uzl
-    if c2zl < Uzl:
-        intersection.append(((c1xl, c1xu), (c1yl, c1yu), (c2zl, Uzl-1)))
-        c2zl = Uzl
-    # max
-    if c1zu > Uzu:
-        intersection.append(((c2xl, c2xu), (c2yl, c2yu), (Uzu+1, c1zu)))
-        c1zu = Uzu
-    if c2zu > Uzu:
-        intersection.append(((c2xl, c2xu), (c2yl, c2yu), (Uzu+1, c2zu)))
-        c2zu = Uzu
-    
-    return (union, intersection)
+    return(intersection)
 
 
+# ====================
+def reduce_list(cubes):
+
+    for i in range(len(cubes)):
+        for j in range(len(cubes)):
+            if i!=j and cubes_overlap(cubes[i], cubes[j]):
+                return reduce_list(cubes[:i] + cubes[i+1:] + intersection(cubes[i],cubes[j]))
+    else:
+        return cubes
+
+
+# ====================
+def turn_off(all_cubes, cube):
+
+    after = []
+    for i in range(len(all_cubes)):
+        if cubes_overlap(all_cubes[i], cube):
+            after.extend(intersection(all_cubes[i], cube))
+        else:
+            after.append(all_cubes[i])
+
+    return after
+
+
+# ====================
 def all_cube_sizes(cubes) -> int:
 
     total = 0
@@ -122,49 +112,26 @@ def all_cube_sizes(cubes) -> int:
     return total
 
 
-def cube_size(cube) -> int:
+# ====================
+def sum_volumes(cuboid_list: list) -> int:
 
-    x_min, x_max = cube[0]
-    y_min, y_max = cube[1]
-    z_min, z_max = cube[2]
-
-    x_range = x_max - x_min + 1
-    y_range = y_max - y_min + 1
-    z_range = z_max - z_min + 1
-
-    return x_range * y_range * z_range
+    return sum(cuboid.volume() for cuboid in cuboid_list)
 
 
-def two_cubes(cube1, cube2):
+# ====================
+lines = get_lines_from_file("data.txt")
+lines = [read_line(line) for line in lines]
+cubes = [cube for _, cube in lines]
+# lines = lines[:11]
+all_cubes = []
 
-    union, intersection = union_and_intersection(cube1,cube2)
-    all = union+intersection
-    return all_cube_sizes(all)
-
-
-def reduce_cubes(cubes):
-
-    for i in range(len(cubes)):
-        for j in range(i+1, len(cubes)):
-            if i!= j:
-                if union_and_intersection(cubes[i], cubes[j]):
-
-                    union, intersection = union_and_intersection(cubes[i], cubes[j])
-                    del cubes[i]
-                    del cubes[j-1]
-                    cubes.extend(union + intersection)
-                    return reduce_cubes(cubes)
+while lines:
+    on_or_off, cube = lines.pop(0)
+    if on_or_off == 'on':
+        all_cubes.append(cube)
+        all_cubes = reduce_list(all_cubes)
     else:
-        return(cubes)
+        all_cubes = turn_off(all_cubes, cube)
+    print(len(all_cubes), len(lines))
 
-
-
-
-lines = get_lines_from_file("test1.txt")
-lines = [get_info(line) for line in lines]
-print(lines[0])
-cubes = [(x,y,z) for _,x,y,z in lines]
-print(cubes[0])
-
-print(len(reduce_cubes(cubes[:8])))
-print(count_on_method_one(cubes[:6]))
+print(sum_volumes(all_cubes))

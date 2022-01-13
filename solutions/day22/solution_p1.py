@@ -42,7 +42,6 @@ def count_on(three_d_matrix):
     return all_cubes.count(True)
 
 
-# ====================
 
 
 # ====================
@@ -54,7 +53,7 @@ def count_on_method_one(cubes):
 
     for cube in cubes:
         x1, x2 = cube[0]
-        y1,y2 = cube[1]
+        y1, y2 = cube[1]
         z1, z2 = cube[2]
         for x in range(x1,x2+1):
             for y in range(y1,y2+1):
@@ -63,7 +62,31 @@ def count_on_method_one(cubes):
     
     return count_on(three_d_matrix)
 
+
+# ====================
+def count_on_method_two(lines):
+
+    three_d_matrix = [ [ [False for x in range(101)] 
+                        for y in range(101) ]
+                        for z in range(101) ]
+    for line in lines:
+        if line[0] == 'on':
+            new_val = True
+        else:
+            print('x')
+            new_val = False
+        x1, x2 = line[1]
+        y1, y2 = line[2]
+        z1, z2 = line[3]
+        for x in range(x1,x2+1):
+            for y in range(y1,y2+1):
+                for z in range(z1,z2+1):
+                    three_d_matrix[x][y][z] = new_val
+
+    return count_on(three_d_matrix)
+
 if __name__ == "__main__":
-    lines = [get_info(l) for l in lines[:2]]
-    print(count_on_method_one(lines))
-# print(union(lines[0], lines[1]))
+
+    lines = [get_info(l) for l in lines]
+    cubes = [(x,y,z) for _,x,y,z in lines]
+    print(count_on_method_two(lines[:11]))
