@@ -149,7 +149,7 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
   </tr>
 
   <tr>
-    <th scope="row"><a href="/solutions/day21/solution-final.py">Day 21</a></th>
+    <th scope="row"><a href="/solutions/day21">Day 21</a></th>
     <td>00:29:14 / 00:42:14 (3923)</td>
     <td><b>10th January 2022 (18450)</b></td>
   </tr>
