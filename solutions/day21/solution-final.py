@@ -60,6 +60,7 @@ p1_wins = 0
 p2_wins = 0
 next_player = 1
 
+# 100 is an arbitrary value that is large enough for all games to complete
 for _ in range(100):
 
     # Initialise new counter dictionary
