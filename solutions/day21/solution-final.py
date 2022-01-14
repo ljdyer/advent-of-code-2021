@@ -1,5 +1,7 @@
+# Test data
 FIRST_TEST = {'start': 7, 'rolls': [2, 2, 1], 'total': 2}
 SECOND_TEST = {'p1_start': 4, 'p2_start': 8, 'answer': 739785}
+# My puzzle data
 ACTUAL = {'p1_start': 5, 'p2_start': 10}
 
 # === Part One ===
