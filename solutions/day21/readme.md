@@ -14,4 +14,4 @@ To consider all universes in an efficient manner, I count game states using nest
 
 Inspired by [comment](https://www.reddit.com/r/adventofcode/comments/rl6p8y/comment/hpmz19t/?utm_source=share&utm_medium=web2x&context=3) from [msschmitt](https://www.reddit.com/user/msschmitt/).
 
-See the code [here](solutions-final.py).
+See the code [here](solution-final.py).
