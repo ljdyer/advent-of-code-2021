@@ -118,8 +118,8 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
   </tr>
 
   <tr>
-    <th scope="row"><a href="/solutions/day16/solution-unfinished.py">Day 16</a></th>
-    <td>NOT YET</td>
+    <th scope="row"><a href="/solutions/day16">Day 16</a></th>
+    <td><b>15th January 2022 (23407)</b></td>
     <td>NOT YET</td>
   </tr>
 
