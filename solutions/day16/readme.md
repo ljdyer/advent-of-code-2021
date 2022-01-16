@@ -8,7 +8,7 @@
 
 I had a [longer, more complicated solution](solution-part-one-old.py) that passed the tests but either got stuck somewhere or was taking too long on my actual puzzle data. Then realised that I could make it much simpler by focusing only on the version numbers and discarding literal values, lengths/numbers of sub-packets, etc. thanks to [kruvik](https://www.reddit.com/user/kruvik/)'s [code](https://www.reddit.com/user/kruvik/) posted in the subreddit. My solution uses a global variable `version_num_counter` to count version numbers—I would like to refactor in the future to remove the dependence on global variables.
 
-See the code [here](solution-part-one.py).
+See the code [here](solutions/solution-part-one.py).
 
 ## Part Two
 
