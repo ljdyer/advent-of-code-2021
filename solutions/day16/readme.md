@@ -31,4 +31,4 @@ I apply the evaluation rules at the end in the `evaluate_packet` function.
 
 I ran into an issue with numpy integer overflow at the end which was causing the answer to come out as 18217636600268 rather than 18234816469452. Importing `math.prod` instead of `numpy.prod` solved it. I had run into this issue on a previous AOC problem so I should have known better than to use `numpy.prod`.
 
-See the code [here](solution-part-two.py).
+See the code [here](solutions/solution-part-two.py).
