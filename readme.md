@@ -46,7 +46,7 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
   </tr>
 
   <tr>
-    <th scope="row"><a href="/solutions/day4/solution-tidied.py">Day 4</a></th>
+    <th scope="row"><a href="/solutions/day4">Day 4</a></th>
     <td>00:16:58 / 00:16:58 (852)</td>
     <td>00:25:05 / 00:25:05 (1056)</td>
   </tr>
