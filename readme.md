@@ -119,8 +119,8 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
 
   <tr>
     <th scope="row"><a href="/solutions/day16">Day 16</a></th>
-    <td><b>15th January 2022 (23407)</b></td>
-    <td>NOT YET</td>
+    <td><b>15th January 2022 (32668)</b></td>
+    <td><b>16th January 2022 (31150)</b></td>
   </tr>
 
   <tr>

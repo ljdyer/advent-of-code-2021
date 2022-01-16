@@ -21,7 +21,7 @@ def get_data_from_file(file: str) -> str:
 
 
 # ====================
-def hex_to_bin(hex):
+def hex_to_bin(hex: str) -> str:
     """Convert a hexidemical string to binary, bitwise"""
 
     bits = ''
