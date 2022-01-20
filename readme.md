@@ -137,9 +137,9 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
 
   </tr>
     <tr>
-    <th scope="row">Day 19</th>
-    <td>NOT YET</td>
-    <td>NOT YET</td>
+    <th scope="row"><a href="/solutions/day19/solution-final.py">Day 19</th>
+    <td><b>17th January 2021 (15936)</b></td>
+    <td><b>20th January 2021 (15749)</b></td>
   </tr>
 
   <tr>
