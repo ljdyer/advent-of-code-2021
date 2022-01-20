@@ -1,4 +1,4 @@
-# TODO: Tidy up and create readme.md!
+# TODO: Refactor - should be able to get down to around 200 lines including whitespace
 
 import random
 import re
