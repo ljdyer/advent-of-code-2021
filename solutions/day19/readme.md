@@ -2,9 +2,9 @@
 
 ## Problem statement
 
-## Solution
-
 [here](https://adventofcode.com/2021/day/19)
+
+## Solution
 
 I think I gave up after about ten minutes on the day and ended up saving this one til near the end as the problem statement broke my mind. The final solution is not pretty but I got the answers out a bit more easily than I'd originally anticipated.
 
