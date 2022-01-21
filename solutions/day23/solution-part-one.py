@@ -27,7 +27,7 @@ VERTICAL_DISTANCE = {
     ('top_row', 'bottom_row'): 3,
 }
 AMPHIPOD_WEIGHT = {'A': 1, 'B': 10, 'C': 100, 'D': 1000}
-HALLWAY_POSITIONS = [1,2,4,6,8,10,11]
+HALLWAY_POSITIONS = [1, 2, 4, 6, 8, 10, 11]
 
 
 # ====================
@@ -39,12 +39,11 @@ class BurrowState:
         specify the order in which the amphipods start on the top and bottom
         rows"""
 
-        self.hallway = {x:'.' for x in HALLWAY_POSITIONS}
-        self.top_row = {x:y for x,y in zip(list('ABCD'), top_state)}
-        self.bottom_row = {x:y for x,y in zip(list('ABCD'), bottom_state)}
+        self.hallway = {x: '.' for x in HALLWAY_POSITIONS}
+        self.top_row = {x: y for x, y in zip(list('ABCD'), top_state)}
+        self.bottom_row = {x: y for x, y in zip(list('ABCD'), bottom_state)}
         self.total_energy = 0
         self.move_log = []
-
 
     # ====================
     def __str__(self):
@@ -61,14 +60,12 @@ class BurrowState:
         rows.append('')
         return '\n'.join(rows)
 
-
     # ====================
     def get(self, area: str, pos) -> str:
         """Return the current state of the position in the area (one of '.',
         'A', 'B', 'C', or 'D')"""
 
         return getattr(self, area)[pos]
-
 
     # ====================
     def remove_amphipod(self, area: str, pos: Union[int, str]):
@@ -77,7 +74,6 @@ class BurrowState:
         state[pos] = '.'
         setattr(self, area, state)
 
-
     # ====================
     def place_amphipod(self, area: str, pos: Union[int, str],
                        amphipod_type: str):
@@ -85,7 +81,6 @@ class BurrowState:
         state = getattr(self, area)
         state[pos] = amphipod_type
         setattr(self, area, state)
-
 
     # ====================
     def move(self, start: tuple, end: tuple):
@@ -102,7 +97,6 @@ class BurrowState:
         self.remove_amphipod(start_row, start_pos)
         self.place_amphipod(end_row, end_pos, a_type)
 
-
     # ====================
     def energy(self, start: tuple, end: tuple) -> int:
         """Calculate the amount of energy required to move from start to
@@ -118,7 +112,6 @@ class BurrowState:
         raw_dist = v_dist + h_dist
         weighted_dist = raw_dist * AMPHIPOD_WEIGHT[amphipod_type]
         return weighted_dist
-
 
     # ====================
     def next_moves(self):
@@ -143,7 +136,7 @@ class BurrowState:
                                                       ('bottom_row', a))
                 if all([h[pos] == '.' for pos in positions]):
                     return [(('hallway', pos), ('bottom_row', a))]
-        
+
         # Can an amphipod in the hallway move into the top row?
         for pos, a in hallway_occupied:
             if b[a] == a and t[a] == '.':
@@ -154,7 +147,7 @@ class BurrowState:
 
         # Can an amphipod in the top row move to its own room?
         for pos, a in top_occupied:
-            if b[a] == '.' and  t[a] == '.':
+            if b[a] == '.' and t[a] == '.':
                 positions = hallway_positions_between(('top_row', pos),
                                                       ('top_row', a))
                 if all([h[pos] == '.' for pos in positions]):
@@ -215,8 +208,8 @@ class BurrowState:
     def finished(self):
         """Return True if all amphipods are in their finishing state"""
 
-        if all([k == v for k,v in self.top_row.items()]) \
-           and all([k == v for k,v in self.bottom_row.items()]):
+        if all([k == v for k, v in self.top_row.items()]) \
+           and all([k == v for k, v in self.bottom_row.items()]):
             return True
         else:
             return False
@@ -291,7 +284,7 @@ def test_energy(state: BurrowState, steps: list, expected_energy: int):
     try:
         assert state.total_energy == expected_energy
         print('test_energy passed.')
-    except:
+    except AssertionError:
         print('!!! test_energy failed !!!')
         quit()
     finally:
@@ -344,7 +337,8 @@ def find_best(start_state: BurrowState, best_so_far: int) -> int:
     for _ in range(25):
         # Remove any states that have exceeded the minimum energy found so far
         states = [b for b in states if b.total_energy < best_so_far]
-        # Add new states for all possible (or optimal) next moves for each state in the list
+        # Add new states for all possible (or optimal) next moves for each
+        # state in the list
         new_states = []
         for state in states:
             poss_moves = state.next_moves()
@@ -352,7 +346,8 @@ def find_best(start_state: BurrowState, best_so_far: int) -> int:
                 new_state = deepcopy(state)
                 start, end = m
                 new_state.move(start, end)
-                # If the finishing state is reached, check whether it is a new minimum
+                # If the finishing state is reached, check whether it is a new
+                # minimum
                 if new_state.finished():
                     if new_state.total_energy < best_so_far:
                         best_so_far = new_state.total_energy
