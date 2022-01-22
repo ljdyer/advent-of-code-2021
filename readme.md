@@ -6,7 +6,7 @@ In the words of its creator Eric Wastl:
 
 I discovered Advent of Code just before the <a href="https://adventofcode.com/2021">2021</a> installment, and decided to challenge myself to complete every puzzle and to publish the results here.
 
-I was able to get **33** out of 50 stars on the day of release of each puzzle, and am currently working through the remaining ones.
+I was able to get **33** out of 50 stars on the day of release of each puzzle, and finally got the **50**th star on 22nd January 2022.
 
 ## Notes about the table below
 
