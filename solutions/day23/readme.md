@@ -26,6 +26,6 @@ See the code [here](solution-part-one.py).
 
 No major changes to how the code works—I just had to make it more abstract as I had hard-coded the 2-row structure in Part One. I use a list of lists to represent the start of the burrow in place of the separate dictionaries for each row used in Part One.
 
-The code takes around 7 minutes to complete.
+The code takes around 7 minutes to run.
 
 See the code [here](solution-part-two.py).
