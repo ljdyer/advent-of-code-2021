@@ -1,16 +1,3 @@
-# On test 
-# Takes around 95 seconds with initial minimum of 20,000
-# Takes around 75 seconds with initial minimum of 15,000
-
-# 20000
-# 28 20000
-# 512 20000
-# 5135 20000
-# 26837 20000
-# 67804 20000
-# 85769 20000
-
-
 from timebudget import timebudget
 from copy import deepcopy
 from tabulate import tabulate
@@ -34,20 +21,15 @@ EMPTY_BURROW = [
     list('##.#.#.#.##')
 ]
 
-LETTER_TO_POS = {'A': 2, 'B': 4, 'C': 6, 'D': 8}
-VERTICAL_DISTANCE = {
-    # TODO: Convert to a function
-    (0, 1): 1,
-    (0, 2): 2,
-    (2, 0): 2,
-    (2, 1): 3,
-    (2, 2): 4,
-    (1, 0): 1,
-    (1, 1): 2,
-    (1, 2): 3,
-}
-AMPHIPOD_WEIGHT = {'A': 1, 'B': 10, 'C': 100, 'D': 1000}
 HALLWAY_POSITIONS = [0, 1, 3, 5, 7, 9, 10]
+SIDE_ROOM_POSITIONS = [2, 4, 6, 8]
+SIDE_ROOM_ROWS = [1, 2]
+SIDE_ROOM_ROWS_REVERSED = list(reversed(SIDE_ROOM_ROWS))
+SIDE_ROOM_LAST_ROW = 2
+SIDE_ROOM_FIRST_ROW = 1
+LETTER_TO_POS = {'A': 2, 'B': 4, 'C': 6, 'D': 8}
+POS_TO_LETTER = {2: 'A', 4: 'B', 6: 'C', 8: 'D'}
+AMPHIPOD_WEIGHT = {'A': 1, 'B': 10, 'C': 100, 'D': 1000}
 AMPHIPOD_TYPES = list('ABCD')
 
 
@@ -88,7 +70,6 @@ class BurrowState:
 
         start_row, start_col = start
         end_row, end_col = end
-
         # Calculate energy required and add to total energy
         energy = self.energy(start, end)
         self.total_energy += energy
@@ -96,6 +77,7 @@ class BurrowState:
         self.burrow[end_row][end_col] = self.burrow[start_row][start_col]
         self.burrow[start_row][start_col] = '.'
         self.move_log.append((start, end))
+
 
     # ====================
     def energy(self, start: tuple, end: tuple) -> int:
@@ -106,110 +88,78 @@ class BurrowState:
         start_row, start_col = start
         end_row, end_col = end
         amphipod_type = self.burrow[start_row][start_col]
-        v_dist = VERTICAL_DISTANCE[(start_row, end_row)]
+        v_dist = vertical_distance(start_row, end_row)
         h_dist = abs(end_col - start_col)
         raw_dist = v_dist + h_dist
         weighted_dist = raw_dist * AMPHIPOD_WEIGHT[amphipod_type]
         return weighted_dist
+
+
+    # # ====================
+    # def get_next_moves(self):
+
+    #     if self.next_move_cache:
+    #         cached_moves = self.next_move_cache.copy()
+    #         self.next_move_cache = []
+    #         return cached_moves
+    #     else:
+    #         self.next_move_cache = self.next_moves()
+    #         return self.next_move_cache
+
+
+    # ====================
+    def hallway_empty(self, start_row, end_row) -> bool:
+
+        if all([self.burrow[0][b] == '.' for b in between(start_row, end_row)]):
+            return True
+        else:
+            return False
+
 
     # ====================
     def next_moves(self):
         """Return all optimal or all possible next moves for the current
         state"""
 
-        hallway_empty = [pos for pos in HALLWAY_POSITIONS
-                         if self.burrow[0][pos] == '.']
-        # print(hallway_empty)
-        hallway_occupied = [pos for pos in HALLWAY_POSITIONS
-                            if self.burrow[0][pos] != '.']
-        # print(hallway_occupied)
-        top_occupied = [pos for pos, c in enumerate(self.burrow[1])
-                        if c.isalpha()]
-        bottom_occupied = [pos for pos, c in enumerate(self.burrow[2])
-                           if c.isalpha()]
-
-        # Can an amphipod in the hallway move into the bottom row?
-        for pos in hallway_occupied:
-            a_type = self.burrow[0][pos]
-            target_pos = LETTER_TO_POS[a_type]
-            if self.burrow[2][target_pos] == '.':
-                if all([self.burrow[0][b] == '.' for b in between(pos, target_pos)]):
-                    return [((0, pos), (2, target_pos))]
-
-        # Can an amphipod in the hallway move into the top row?
-        for pos in hallway_occupied:
-            a_type = self.burrow[0][pos]
-            target_pos = LETTER_TO_POS[a_type]
-            if self.burrow[2][target_pos] == a_type \
-               and self.burrow[1][target_pos] == '.':
-                # print('x')
-                # print(between(pos, target_pos))
-                if all([self.burrow[0][b] == '.' for b in between(pos, target_pos)]):
-                    return [((0, pos), (1, target_pos))]
-
-        # Can an amphipod in the top row move to its own room?
-        for pos in top_occupied:
-            a_type = self.burrow[1][pos]
-            target_pos = LETTER_TO_POS[a_type]
-            if pos == target_pos:
+        movables = []
+        for pos in HALLWAY_POSITIONS:
+            if self.burrow[0][pos] != '.':
+                movables.append((0, pos, self.burrow[0][pos]))
+        for pos in SIDE_ROOM_POSITIONS:
+            if all(self.burrow[row][pos] == POS_TO_LETTER[pos] or self.burrow[row][pos] == '.' for row in SIDE_ROOM_ROWS):
                 pass
-            elif self.burrow[2][target_pos] == '.':
-                # Move to bottom room
-                if all([self.burrow[0][b] == '.' for b in between(pos, target_pos)]):
-                    return [((1, pos), (2, target_pos))]
-            elif self.burrow[2][target_pos] == a_type \
-                 and self.burrow[1][target_pos] == '.':
-                # Move to top room
-                if all([self.burrow[0][b] == '.' for b in between(pos, target_pos)]):
-                    return [((1, pos), (1, target_pos))]
+            elif row := next((row for row in SIDE_ROOM_ROWS if self.burrow[row][pos].isalpha()), None):
+                movables.append((row, pos, self.burrow[row][pos]))
 
-        # Can an amphipod in the bottom row move to its own room?
-        for pos in bottom_occupied:
-            a_type = self.burrow[2][pos]
+        for row, pos, a_type in movables:
             target_pos = LETTER_TO_POS[a_type]
-            if pos == target_pos:
-                pass
-            elif self.burrow[1][pos] == '.':
-                if self.burrow[2][target_pos] == '.':
-                    if all([self.burrow[0][b] == '.' for b in between(pos, target_pos)]):
-                        return [((2, pos), (2, target_pos))]
-                if self.burrow[2][target_pos] == a_type \
-                   and self.burrow[1][target_pos] == '.':
-                    if all([self.burrow[0][b] == '.' for b in between(pos, target_pos)]):
-                        return [((2, pos), (1, target_pos))]
+            if self.hallway_empty(pos, target_pos):
+                if pos != target_pos:
+                    # Can we put it in the bottom row?
+                    for row_ in SIDE_ROOM_ROWS_REVERSED:
+                        if all(self.burrow[r][target_pos] == '.' for r in range(row_, SIDE_ROOM_FIRST_ROW-1, -1)) \
+                            and all(self.burrow[r][target_pos] == a_type for r in range(row_+1, SIDE_ROOM_LAST_ROW+1)):
+                            return [((row, pos), (row_, target_pos))]
 
         # If none of the above options are available, consider all moves out
         # of rooms into hallway
         possible_moves = []
-        for pos in top_occupied:
-            a_type = self.burrow[1][pos]
-            target_pos = LETTER_TO_POS[a_type]
-            if pos == target_pos and self.burrow[2][target_pos] == a_type:
-                pass
-            else:
-                for hallway_pos in hallway_empty:
-                    if all([self.burrow[0][b] == '.' for b in between(pos, hallway_pos)]):
-                        possible_moves.append(((1, pos), (0, hallway_pos)))
-
-        for pos in bottom_occupied:
-            a_type = self.burrow[2][pos]
-            target_pos = LETTER_TO_POS[a_type]
-            if pos == target_pos:
-                pass
-            else:
-                if self.burrow[1][pos] == '.':
-                    for hallway_pos in hallway_empty:
-                        if all([self.burrow[0][b] == '.' for b in between(pos, hallway_pos)]):
-                            possible_moves.append(((2, pos), (0, hallway_pos)))
-
+        for row, pos, a_type in movables:
+            if row != 0:
+                if LETTER_TO_POS[a_type] == pos and all(self.burrow[row_][pos] == LETTER_TO_POS[a_type] for row_ in range(row_, SIDE_ROOM_LAST_ROW)):
+                    pass
+                else:
+                    for target_pos in HALLWAY_POSITIONS:
+                        if self.hallway_empty(pos, target_pos):
+                            possible_moves.append(((row, pos), (0, target_pos)))
         return possible_moves
 
 
 # === HELPER FUNCTIONS FOR BurrowState CLASS ===
 
-# ====================
 def vertical_distance(start_row: int, end_row: int) -> int:
-    # NEED TO TEST THIS AND SUB IN
+    """Return the number of spaces that need to be moved in the vertical
+    direction (up or down) to get from a space in row1 to a space in row2"""
 
     if start_row == 0:
         return end_row
@@ -291,6 +241,20 @@ def animate_random_steps(state: BurrowState):
             return None
 
 
+def test_find_best(start_state: BurrowState, best_so_far: int,
+                   expected_energy: int):
+
+    print("=== test_find_best ===")
+    actual = find_best(start_state, best_so_far)
+    try:
+        assert actual == expected_energy
+        print('Test passed.')
+    except AssertionError:
+        print("!!! TEST FAILED !!!", actual, expected_energy)
+
+
+
+
 # === SOLUTION ===
 
 def find_best(start_state: BurrowState, best_so_far: int) -> int:
@@ -311,37 +275,39 @@ def find_best(start_state: BurrowState, best_so_far: int) -> int:
     # sooner, but increase the value as necessary.
     for _ in range(25):
         # Remove any states that have exceeded the minimum energy found so far
-        states = [b for b in states if b.total_energy < best_so_far]
-        # Add new states for all possible (or optimal) next moves for each
-        # state in the list
-        new_states = []
-        for state in states:
-            poss_moves = state.next_moves()
-            for m in poss_moves:
-                new_state = deepcopy(state)
-                start, end = m
-                new_state.move(start, end)
-                # If the finishing state is reached, check whether it is a new
-                # minimum
-                if new_state.finished():
-                    if new_state.total_energy < best_so_far:
-                        best_so_far = new_state.total_energy
-                        best_solution = new_state.move_log
-                # If no more moves are possible, remove the state
-                elif not new_state.next_moves():
-                    pass
+        for b in states:
+            if b.total_energy >= best_so_far:
+                continue
+            else:
+            # Add new states for all possible (or optimal) next moves for each
+            # state in the list
+                new_states = []
+                for state in states:
+                    poss_moves = state.next_moves()
+                    for m in poss_moves:
+                        new_state = deepcopy(state)
+                        start, end = m
+                        new_state.move(start, end)
+                        # If the finishing state is reached, check whether it is a new
+                        # minimum
+                        if new_state.finished():
+                            if new_state.total_energy < best_so_far:
+                                best_so_far = new_state.total_energy
+                                best_solution = new_state.move_log
+                        # If no more moves are possible, remove the state
+                        elif not new_state.next_moves():
+                            pass
+                        else:
+                            new_states.append(new_state)
+                # If there are new unfinished states, use them for the next iteration
+                if new_states:
+                    states = new_states
+                # Otherwise, exit
                 else:
-                    new_states.append(new_state)
-        # If there are new unfinished states, use them for the next iteration
-        if new_states:
-            states = new_states
-        # Otherwise, exit
-        else:
-            print()
-            print(best_so_far)
-            print(tabulate(best_solution))
-            return best_so_far
-        print(len(states), best_so_far)
+                    print()
+                    print(tabulate(best_solution))
+                    return best_so_far
+                print(len(states), best_so_far)
 
 
 # === TEST DATA ===
@@ -362,8 +328,6 @@ TEST_STEPS = [
 TEST_EXPECTED_ENERGY = 12521
 
 
-
-
 # === ACTUAL DATA ===
 
 ACTUAL_START_STATE = BurrowState('DADC', 'CABB')
@@ -372,4 +336,4 @@ ACTUAL_START_STATE = BurrowState('DADC', 'CABB')
 # ====================
 # animate_steps(TEST_START_STATE, TEST_STEPS)
 with timebudget('Method 1'):
-    find_best(ACTUAL_START_STATE, 20000)
+    test_find_best(ACTUAL_START_STATE, 15000, 14546)

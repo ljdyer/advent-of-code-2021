@@ -1,3 +1,16 @@
+# Takes around 92 seconds
+
+# 20000
+# 28 20000
+# 512 20000
+# 5135 20000
+# 26837 20000
+# 67804 20000
+# 85769 20000
+# 82106 20000
+
+
+from timebudget import timebudget
 from tabulate import tabulate
 from copy import deepcopy
 from typing import Union
@@ -42,8 +55,8 @@ class BurrowState:
         self.hallway = {x: '.' for x in HALLWAY_POSITIONS}
         self.top_row = {x: y for x, y in zip(list('ABCD'), top_state)}
         self.bottom_row = {x: y for x, y in zip(list('ABCD'), bottom_state)}
-        self.total_energy = 0
         self.move_log = []
+        self.total_energy = 0
 
     # ====================
     def __str__(self):
@@ -89,13 +102,13 @@ class BurrowState:
         energy = self.energy(start, end)
         self.total_energy += energy
         # Make a record of the move in the log
-        self.move_log.append((start, end, energy))
         # Move the amphipod
         start_row, start_pos = start
         end_row, end_pos = end
         a_type = self.get(start_row, start_pos)
         self.remove_amphipod(start_row, start_pos)
         self.place_amphipod(end_row, end_pos, a_type)
+        self.move_log.append((start, end))
 
     # ====================
     def energy(self, start: tuple, end: tuple) -> int:
@@ -392,4 +405,5 @@ ACTUAL_START_STATE = BurrowState('DADC', 'CABB')
 
 
 # ====================
-find_best(ACTUAL_START_STATE, 20000)
+with timebudget('Method 1'):
+    find_best(ACTUAL_START_STATE, 20000)

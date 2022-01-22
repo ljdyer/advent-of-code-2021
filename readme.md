@@ -114,13 +114,13 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
   <tr>
     <th scope="row"><a href="/solutions/day15/">Day 15</a></th>
     <td>01:02:09 / 01:02:09 (3999)</td>
-    <td><b>28th Dec 2021 (34521)</b></td>
+    <td><b>28 Dec 2021 (34521)</b></td>
   </tr>
 
   <tr>
     <th scope="row"><a href="/solutions/day16">Day 16</a></th>
-    <td><b>15th January 2022 (32668)</b></td>
-    <td><b>16th January 2022 (31150)</b></td>
+    <td><b>15 Jan 2022 (32668)</b></td>
+    <td><b>16 Jan 2022 (31150)</b></td>
   </tr>
 
   <tr>
@@ -131,50 +131,50 @@ I was able to get **33** out of 50 stars on the day of release of each puzzle, a
 
   <tr>
     <th scope="row"><a href="/solutions/day18">Day 18</a></th>
-    <td><b>8th January 2022 (23407)</b></td>
-    <td><b>8th January 2022 (23250)</b></td>
+    <td><b>8 Jan 2022 (23407)</b></td>
+    <td><b>8 Jan 2022 (23250)</b></td>
   </tr>
 
   </tr>
     <tr>
     <th scope="row"><a href="/solutions/day19/solution-final.py">Day 19</th>
-    <td><b>17th January 2021 (15936)</b></td>
-    <td><b>20th January 2021 (15749)</b></td>
+    <td><b>17 Jan 2021 (15936)</b></td>
+    <td><b>20 Jan 2021 (15749)</b></td>
   </tr>
 
   <tr>
     <th scope="row"><a href="/solutions/day20">Day 20</a></th>
     <td>??:??:?? / 01:37:36 (3269)*</td>
-    <td><b>1st January 2022 (20561)</b></td>
+    <td><b>1 Jan 2022 (20561)</b></td>
   </tr>
 
   <tr>
     <th scope="row"><a href="/solutions/day21">Day 21</a></th>
     <td>00:29:14 / 00:42:14 (3923)</td>
-    <td><b>10th January 2022 (18450)</b></td>
+    <td><b>10 Jan 2022 (18450)</b></td>
   </tr>
 
   <tr>
     <th scope="row"><a href="/solutions/day22">Day 22</a></th>
     <td>00:29:42 / 00:29:42 (2451)</td>
-    <td><b>13th January 2022 (14455)</td>
+    <td><b>13 Jan 2022 (14455)</td>
   </tr>
 
   <tr>
     <th scope="row"><a href="/solutions/day23/">Day 23</a></th>
-    <td><b>2nd January 2021 (13515)</b></td>
-    <td>NOT YET</td>
+    <td><b>2 Jan 2021 (13515)</b></td>
+    <td><b>22 Jan 2021 (12398)</b></td>
   </tr>
 
   <tr>
     <th scope="row"><a href="/solutions/day24">Day 24</a></th>
-    <td><b>7th January 2021 (11433)</b></td>
-    <td><b>7th January 2021 (11313)</b></td>
+    <td><b>7 Jan 2021 (11433)</b></td>
+    <td><b>7 Jan 2021 (11313)</b></td>
   </tr>
 
   <tr>
     <th scope="row"><a href="/solutions/day25/">Day 25</a></th>
-    <td><b>29th Dec 2021 (13044)</b></td>
-    <td>NOT YET</td>
+    <td><b>29 Dec 2021 (13044)</b></td>
+    <td><b>22 Jan 2021 (13044)</b></td>
   </tr>
 </table>
