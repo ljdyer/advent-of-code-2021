@@ -1,4 +1,4 @@
-# Advent of Code 2021 <img src="stars.PNG">
+# Advent of Code 2021 <img src="stars.PNG"><img src="python_logo_transparent.png"></img>
 
 In the words of its creator Eric Wastl:
 

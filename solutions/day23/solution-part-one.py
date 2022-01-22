@@ -1,14 +1,4 @@
-# Takes around 92 seconds
-
-# 20000
-# 28 20000
-# 512 20000
-# 5135 20000
-# 26837 20000
-# 67804 20000
-# 85769 20000
-# 82106 20000
-
+# Takes around 95 seconds to run
 
 from timebudget import timebudget
 from tabulate import tabulate
@@ -317,7 +307,7 @@ def animate_random_steps(state: BurrowState):
         os.system('cls')
         try:
             start, end = random.choice(state.next_moves())
-        except:
+        except IndexError:
             print(state)
             print("Can't move!")
             return None
@@ -405,5 +395,5 @@ ACTUAL_START_STATE = BurrowState('DADC', 'CABB')
 
 
 # ====================
-with timebudget('Method 1'):
+with timebudget('find_best'):
     find_best(ACTUAL_START_STATE, 20000)
